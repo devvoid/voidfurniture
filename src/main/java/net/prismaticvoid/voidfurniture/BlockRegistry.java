@@ -49,11 +49,52 @@ public class BlockRegistry {
             new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
+    public static final Block BIRCH_TABLE_CENTER = registerBlockWithItem("birch_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock BIRCH_TABLE_CORNER = registerBlockWithItem("birch_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final Block SPRUCE_TABLE_CENTER = registerBlockWithItem("spruce_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock SPRUCE_TABLE_CORNER = registerBlockWithItem("spruce_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final Block JUNGLE_TABLE_CENTER = registerBlockWithItem("jungle_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock JUNGLE_TABLE_CORNER = registerBlockWithItem("jungle_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final Block ACACIA_TABLE_CENTER = registerBlockWithItem("acacia_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock ACACIA_TABLE_CORNER = registerBlockWithItem("acacia_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final Block DARK_OAK_TABLE_CENTER = registerBlockWithItem("dark_oak_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock DARK_OAK_TABLE_CORNER = registerBlockWithItem("dark_oak_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
     // Campfires
-    public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
+/*    public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
 
     public static final CampfireBlock OAK_CAMPFIRE = registerBlockWithItem("oak_campfire", new CampfireBlock(true, 1,
             FabricBlockSettings.of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
+            */
 
     // Misc
     public static final Block PLANT_POT = registerBlockWithItem("plant_pot",
@@ -61,11 +102,13 @@ public class BlockRegistry {
     );
 
     static {
+        /*
         CAMPFIRE_BLOCK_ENTITY = Registry.register(
                 Registry.BLOCK_ENTITY_TYPE,
                 new Identifier("voidfurniture", "campfire"),
                 FabricBlockEntityTypeBuilder.create(CampfireBlockEntity::new, OAK_CAMPFIRE).build()
         );
+         */
     }
 
     public static void init() {

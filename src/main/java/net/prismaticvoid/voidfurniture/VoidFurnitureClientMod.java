@@ -17,8 +17,7 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
-
-        BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
+        //BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
+        //BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
     }
 }

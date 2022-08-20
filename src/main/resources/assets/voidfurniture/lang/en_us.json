@@ -10,6 +10,16 @@
 
   "block.voidfurniture.oak_table_center": "Oak Table Center",
   "block.voidfurniture.oak_table_corner": "Oak Table Corner",
+  "block.voidfurniture.birch_table_center": "Birch Table Center",
+  "block.voidfurniture.birch_table_corner": "Birch Table Corner",
+  "block.voidfurniture.spruce_table_center": "Spruce Table Center",
+  "block.voidfurniture.spruce_table_corner": "Spruce Table Corner",
+  "block.voidfurniture.jungle_table_center": "Jungle Table Center",
+  "block.voidfurniture.jungle_table_corner": "Jungle Table Corner",
+  "block.voidfurniture.acacia_table_center": "Acacia Table Center",
+  "block.voidfurniture.acacia_table_corner": "Acacia Table Corner",
+  "block.voidfurniture.dark_oak_table_center": "Dark Oak Table Center",
+  "block.voidfurniture.dark_oak_table_corner": "Dark Oak Table Corner",
 
   "block.voidfurniture.plant_pot": "Plant Pot"
 }
