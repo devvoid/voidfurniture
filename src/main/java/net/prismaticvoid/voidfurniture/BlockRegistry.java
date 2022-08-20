@@ -145,8 +145,9 @@ public class BlockRegistry {
         String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
         for (int i = 0; i < types.length; i++) {
-            VoidFurnitureMod.LOGGER.info(types[i]);
-            registerBlockWithItem(types[i] + "_" + name, block);
+            var new_name = types[i] + "_" + name;
+            VoidFurnitureMod.LOGGER.info(new_name);
+            registerBlockWithItem(new_name, block);
         }
     }
 
