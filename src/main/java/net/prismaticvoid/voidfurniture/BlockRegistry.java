@@ -53,8 +53,7 @@ public class BlockRegistry {
     public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
 
     public static final CampfireBlock OAK_CAMPFIRE = registerBlockWithItem("oak_campfire", new CampfireBlock(true, 1,
-            FabricBlockSettings
-                    .of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
+            FabricBlockSettings.of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
 
     // Misc
     public static final Block PLANT_POT = registerBlockWithItem("plant_pot",
