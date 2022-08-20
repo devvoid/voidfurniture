@@ -3,13 +3,17 @@ package net.prismaticvoid.voidfurniture;
 import com.ibm.icu.impl.UResource;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.function.ToIntFunction;
+
 public class BlockRegistry {
+    // Chairs
     public static final ChairBlock OAK_CHAIR = registerWithItem("oak_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
@@ -34,12 +38,23 @@ public class BlockRegistry {
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
+    // Tables
     public static final Block OAK_TABLE_CENTER = registerWithItem("oak_table_center",
             new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
     public static final TableCornerBlock OAK_TABLE_CORNER = registerWithItem ("oak_table_corner",
             new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    // Campfires
+    public static final CampfireBlock OAK_CAMPFIRE = registerWithItem("oak_campfire", new CampfireBlock(true, 1,
+            FabricBlockSettings
+                    .of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
+
+    // Misc
+    public static final Block PLANT_POT = registerWithItem("plant_pot",
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F))
     );
 
     public static void init() {
@@ -54,5 +69,11 @@ public class BlockRegistry {
 
     private static <B extends Block> B register(String name, B block) {
         return Registry.register(Registry.BLOCK, Utils.id(name), block);
+    }
+
+    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
+        return (state) -> {
+            return (Boolean)state.get(Properties.LIT) ? litLevel : 0;
+        };
     }
 }

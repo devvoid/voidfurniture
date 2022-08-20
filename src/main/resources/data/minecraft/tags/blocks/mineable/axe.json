@@ -1,0 +1,9 @@
+{
+  "replace": "false",
+  "values": [
+    "voidfurniture:oak_chair",
+    "voidfurniture:birch_chair",
+    "voidfurniture:oak_table_center",
+    "voidfurniture:oak_table_corner"
+  ]
+}

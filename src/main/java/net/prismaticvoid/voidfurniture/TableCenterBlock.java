@@ -18,6 +18,6 @@ public class TableCenterBlock extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0.0, 0.8, 0.0, 1.0, 1.0, 1.0);
+        return VoxelShapes.cuboid(0.0, 14.0 / 16.0, 0.0, 1.0, 1.0, 1.0);
     }
 }

@@ -1,0 +1,15 @@
+{
+  "itemGroup.voidfurniture.general": "VoidFurniture",
+
+  "block.voidfurniture.oak_chair": "Oak Chair",
+  "block.voidfurniture.birch_chair": "Birch Chair",
+  "block.voidfurniture.spruce_chair": "Spruce Chair",
+  "block.voidfurniture.jungle_chair": "Jungle Chair",
+  "block.voidfurniture.dark_oak_chair": "Dark Oak Chair",
+  "block.voidfurniture.acacia_chair": "Acacia Chair",
+
+  "block.voidfurniture.oak_table_center": "Oak Table Center",
+  "block.voidfurniture.oak_table_corner": "Oak Table Corner",
+
+  "block.voidfurniture.plant_pot": "Plant Pot"
+}

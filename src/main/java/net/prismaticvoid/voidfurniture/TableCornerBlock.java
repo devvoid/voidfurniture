@@ -31,6 +31,18 @@ public class TableCornerBlock extends HorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return VoxelShapes.cuboid(0.0, 0.8, 0.0, 1.0, 1.0, 1.0);
+        var top = VoxelShapes.cuboid(0.0, 14.0 / 16.0, 0.0, 1.0, 1.0, 1.0);
+
+        Direction dir = state.get(FACING);
+
+        var leg = switch(dir) {
+            case NORTH -> Utils.make_cuboid(12.0, 0.0, 12.0, 3.0, 15.0, 3.0);
+            case SOUTH -> Utils.make_cuboid(1.0, 0.0, 1.0, 3.0, 15.0, 3.0);
+            case EAST -> Utils.make_cuboid(1.0, 0.0, 12.0, 3.0, 15.0, 3.0);
+            case WEST -> Utils.make_cuboid(12.0, 0.0, 1.0, 3.0, 15.0, 3.0);
+            default -> VoxelShapes.fullCube();
+        };
+
+        return VoxelShapes.union(top, leg);
     }
 }
