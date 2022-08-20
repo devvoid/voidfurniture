@@ -1,9 +1,14 @@
 package net.prismaticvoid.voidfurniture;
 
+import com.google.common.collect.ImmutableSet;
 import com.ibm.icu.impl.UResource;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
@@ -59,6 +64,11 @@ public class BlockRegistry {
 
     public static void init() {
 
+        Registry.register(
+                Registry.BLOCK_ENTITY_TYPE,
+                new Identifier("voidfurniture", "campfire"),
+                FabricBlockEntityTypeBuilder.create(CampfireBlockEntity::new, OAK_CAMPFIRE).build()
+        );
     }
 
     private static <B extends Block> B registerWithItem(String name, B block) {
