@@ -1,12 +1,9 @@
 package net.prismaticvoid.voidfurniture;
 
-import com.google.common.collect.ImmutableSet;
-import com.ibm.icu.impl.UResource;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.item.BlockItem;
@@ -19,65 +16,71 @@ import java.util.function.ToIntFunction;
 
 public class BlockRegistry {
     // Chairs
-    public static final ChairBlock OAK_CHAIR = registerWithItem("oak_chair",
+    public static final ChairBlock OAK_CHAIR = registerBlockWithItem("oak_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock BIRCH_CHAIR = registerWithItem("birch_chair",
+    public static final ChairBlock BIRCH_CHAIR = registerBlockWithItem("birch_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock SPRUCE_CHAIR = registerWithItem("spruce_chair",
+    public static final ChairBlock SPRUCE_CHAIR = registerBlockWithItem("spruce_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock JUNGLE_CHAIR = registerWithItem("jungle_chair",
+    public static final ChairBlock JUNGLE_CHAIR = registerBlockWithItem("jungle_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock DARK_OAK_CHAIR = registerWithItem("dark_oak_chair",
+    public static final ChairBlock DARK_OAK_CHAIR = registerBlockWithItem("dark_oak_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock ACACIA_CHAIR = registerWithItem("acacia_chair",
+    public static final ChairBlock ACACIA_CHAIR = registerBlockWithItem("acacia_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
     // Tables
-    public static final Block OAK_TABLE_CENTER = registerWithItem("oak_table_center",
+    public static final Block OAK_TABLE_CENTER = registerBlockWithItem("oak_table_center",
             new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final TableCornerBlock OAK_TABLE_CORNER = registerWithItem ("oak_table_corner",
+    public static final TableCornerBlock OAK_TABLE_CORNER = registerBlockWithItem("oak_table_corner",
             new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
     // Campfires
-    public static final CampfireBlock OAK_CAMPFIRE = registerWithItem("oak_campfire", new CampfireBlock(true, 1,
+    public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
+
+    public static final CampfireBlock OAK_CAMPFIRE = registerBlockWithItem("oak_campfire", new CampfireBlock(true, 1,
             FabricBlockSettings
                     .of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
 
     // Misc
-    public static final Block PLANT_POT = registerWithItem("plant_pot",
+    public static final Block PLANT_POT = registerBlockWithItem("plant_pot",
             new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F))
     );
 
-    public static void init() {
-
-        Registry.register(
+    static {
+        CAMPFIRE_BLOCK_ENTITY = Registry.register(
                 Registry.BLOCK_ENTITY_TYPE,
                 new Identifier("voidfurniture", "campfire"),
                 FabricBlockEntityTypeBuilder.create(CampfireBlockEntity::new, OAK_CAMPFIRE).build()
         );
     }
 
-    private static <B extends Block> B registerWithItem(String name, B block) {
-        final B b = register(name, block);
+    public static void init() {
+
+
+    }
+
+    private static <B extends Block> B registerBlockWithItem(String name, B block) {
+        final B b = registerBlock(name, block);
         Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
         return b;
     }
 
-    private static <B extends Block> B register(String name, B block) {
+    private static <B extends Block> B registerBlock(String name, B block) {
         return Registry.register(Registry.BLOCK, Utils.id(name), block);
     }
 
