@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "y  "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:oak_planks"
+    },
+
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:oak_table_corner",
+    "count": 2
+  }
+}

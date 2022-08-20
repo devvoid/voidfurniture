@@ -7,6 +7,8 @@
   "block.voidfurniture.jungle_chair": "Jungle Chair",
   "block.voidfurniture.dark_oak_chair": "Dark Oak Chair",
   "block.voidfurniture.acacia_chair": "Acacia Chair",
+  "block.voidfurniture.crimson_chair": "Crimson Chair",
+  "block.voidfurniture.warped_chair": "Warped Chair",
 
   "block.voidfurniture.oak_table_center": "Oak Table Center",
   "block.voidfurniture.oak_table_corner": "Oak Table Corner",
@@ -20,6 +22,26 @@
   "block.voidfurniture.acacia_table_corner": "Acacia Table Corner",
   "block.voidfurniture.dark_oak_table_center": "Dark Oak Table Center",
   "block.voidfurniture.dark_oak_table_corner": "Dark Oak Table Corner",
+  "block.voidfurniture.crimson_table_center": "Crimson Table Center",
+  "block.voidfurniture.crimson_table_corner": "Crimson Table Corner",
+  "block.voidfurniture.warped_table_center": "Warped Table Center",
+  "block.voidfurniture.warped_table_corner": "Warped Table Corner",
 
-  "block.voidfurniture.plant_pot": "Plant Pot"
+  "block.voidfurniture.plant_pot": "Plant Pot",
+  "block.voidfurniture.white_plant_pot": "White Plant Pot",
+  "block.voidfurniture.orange_plant_pot": "Orange Plant Pot",
+  "block.voidfurniture.magenta_plant_pot": "Magenta Plant Pot",
+  "block.voidfurniture.light_blue_plant_pot": "Light Blue Plant Pot",
+  "block.voidfurniture.yellow_plant_pot": "Yellow Plant Pot",
+  "block.voidfurniture.lime_plant_pot": "Lime Plant Pot",
+  "block.voidfurniture.pink_plant_pot": "Pink Plant Pot",
+  "block.voidfurniture.gray_plant_pot": "Gray Plant Pot",
+  "block.voidfurniture.light_gray_plant_pot": "Light Gray Plant Pot",
+  "block.voidfurniture.cyan_plant_pot": "Cyan Plant Pot",
+  "block.voidfurniture.purple_plant_pot": "Purple Plant Pot",
+  "block.voidfurniture.blue_plant_pot": "Blue Plant Pot",
+  "block.voidfurniture.brown_plant_pot": "Brown Plant Pot",
+  "block.voidfurniture.green_plant_pot": "Green Plant Pot",
+  "block.voidfurniture.red_plant_pot": "Red Plant Pot",
+  "block.voidfurniture.black_plant_pot": "Black Plant Pot"
 }

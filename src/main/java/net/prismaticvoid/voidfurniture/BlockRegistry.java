@@ -11,8 +11,10 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import org.slf4j.LoggerFactory;
 
 import java.util.function.ToIntFunction;
+import java.util.logging.Logger;
 
 public class BlockRegistry {
     // Chairs
@@ -32,11 +34,19 @@ public class BlockRegistry {
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
+    public static final ChairBlock ACACIA_CHAIR = registerBlockWithItem("acacia_chair",
+            new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
     public static final ChairBlock DARK_OAK_CHAIR = registerBlockWithItem("dark_oak_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
-    public static final ChairBlock ACACIA_CHAIR = registerBlockWithItem("acacia_chair",
+    public static final ChairBlock CRIMSON_CHAIR = registerBlockWithItem("crimson_chair",
+            new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final ChairBlock WARPED_CHAIR = registerBlockWithItem("warped_chair",
             new ChairBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
@@ -89,6 +99,22 @@ public class BlockRegistry {
             new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
     );
 
+    public static final Block CRIMSON_TABLE_CENTER = registerBlockWithItem("crimson_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock CRIMSON_TABLE_CORNER = registerBlockWithItem("crimson_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final Block WARPED_TABLE_CENTER = registerBlockWithItem("warped_table_center",
+            new TableCenterBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
+    public static final TableCornerBlock WARPED_TABLE_CORNER = registerBlockWithItem("warped_table_corner",
+            new TableCornerBlock(FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque())
+    );
+
     // Campfires
 /*    public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
 
@@ -112,8 +138,16 @@ public class BlockRegistry {
     }
 
     public static void init() {
+        registerDyedItem("plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F)));
+    }
 
+    private static <B extends Block> void registerDyedItem(String name, B block) {
+        String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
+        for (int i = 0; i < types.length; i++) {
+            VoidFurnitureMod.LOGGER.info(types[i]);
+            registerBlockWithItem(types[i] + "_" + name, block);
+        }
     }
 
     private static <B extends Block> B registerBlockWithItem(String name, B block) {

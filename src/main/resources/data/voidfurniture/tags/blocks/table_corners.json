@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "voidfurniture:oak_table_corner",
+    "voidfurniture:birch_table_corner",
+    "voidfurniture:spruce_table_corner",
+    "voidfurniture:jungle_table_corner",
+    "voidfurniture:acacia_table_corner",
+    "voidfurniture:dark_oak_table_corner",
+    "voidfurniture:crimson_table_corner",
+    "voidfurniture:warped_table_corner"
+  ]
+}

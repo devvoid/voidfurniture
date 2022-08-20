@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/base_campfire_off",
+  "textures": {
+    "1": "voidfurniture:block/warped_campfire_cap",
+    "2": "voidfurniture:block/warped_campfire_log"
+  }
+}
