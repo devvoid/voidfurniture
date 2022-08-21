@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "minecraft:magenta_dye"
+	},
+	{
+		"tag": "voidfurniture:floor_cushions"
+	}
+  ],
+  "result": {
+    "item": "voidfurniture:magenta_floor_cushion",
+    "count": 1
+  }
+}

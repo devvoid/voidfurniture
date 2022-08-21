@@ -144,6 +144,12 @@ public class BlockRegistry {
                 FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F),
                 (fabricBlockSettings) -> {return new Block(fabricBlockSettings);}
         );
+
+        registerDyedBlock(
+                "floor_cushion",
+                FabricBlockSettings.of(Material.WOOL).strength(0.8f),
+                (fabricBlockSettings -> {return new FloorCushionBlock(fabricBlockSettings);})
+        );
     }
 
     private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
