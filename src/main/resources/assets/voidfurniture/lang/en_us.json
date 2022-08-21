@@ -11,22 +11,21 @@
   "block.voidfurniture.warped_chair": "Warped Chair",
 
   "block.voidfurniture.oak_table_center": "Oak Table Center",
-  "block.voidfurniture.oak_table_corner": "Oak Table Corner",
   "block.voidfurniture.birch_table_center": "Birch Table Center",
-  "block.voidfurniture.birch_table_corner": "Birch Table Corner",
   "block.voidfurniture.spruce_table_center": "Spruce Table Center",
-  "block.voidfurniture.spruce_table_corner": "Spruce Table Corner",
   "block.voidfurniture.jungle_table_center": "Jungle Table Center",
-  "block.voidfurniture.jungle_table_corner": "Jungle Table Corner",
-  "block.voidfurniture.acacia_table_center": "Acacia Table Center",
-  "block.voidfurniture.acacia_table_corner": "Acacia Table Corner",
   "block.voidfurniture.dark_oak_table_center": "Dark Oak Table Center",
-  "block.voidfurniture.dark_oak_table_corner": "Dark Oak Table Corner",
+  "block.voidfurniture.acacia_table_center": "Acacia Table Center",
   "block.voidfurniture.crimson_table_center": "Crimson Table Center",
-  "block.voidfurniture.crimson_table_corner": "Crimson Table Corner",
   "block.voidfurniture.warped_table_center": "Warped Table Center",
+  "block.voidfurniture.oak_table_corner": "Oak Table Corner",
+  "block.voidfurniture.birch_table_corner": "Birch Table Corner",
+  "block.voidfurniture.spruce_table_corner": "Spruce Table Corner",
+  "block.voidfurniture.jungle_table_corner": "Jungle Table Corner",
+  "block.voidfurniture.dark_oak_table_corner": "Dark Oak Table Corner",
+  "block.voidfurniture.acacia_table_corner": "Acacia Table Corner",
+  "block.voidfurniture.crimson_table_corner": "Crimson Table Corner",
   "block.voidfurniture.warped_table_corner": "Warped Table Corner",
-  
   "block.voidfurniture.oak_table_edge": "Oak Table Edge",
   "block.voidfurniture.birch_table_edge": "Birch Table Edge",
   "block.voidfurniture.spruce_table_edge": "Spruce Table Edge",
@@ -35,6 +34,31 @@
   "block.voidfurniture.acacia_table_edge": "Acacia Table Edge",
   "block.voidfurniture.crimson_table_edge": "Crimson Table Edge",
   "block.voidfurniture.warped_table_edge": "Warped Table Edge",
+
+  "block.voidfurniture.oak_short_table_center": "Oak Short Table Center",
+  "block.voidfurniture.birch_short_table_center": "Birch Short Table Center",
+  "block.voidfurniture.spruce_short_table_center": "Spruce Short Table Center",
+  "block.voidfurniture.jungle_short_table_center": "Jungle Short Table Center",
+  "block.voidfurniture.dark_oak_short_table_center": "Dark Oak Short Table Center",
+  "block.voidfurniture.acacia_short_table_center": "Acacia Short Table Center",
+  "block.voidfurniture.crimson_short_table_center": "Crimson Short Table Center",
+  "block.voidfurniture.warped_short_table_center": "Warped Short Table Center",
+  "block.voidfurniture.oak_short_table_corner": "Oak Short Table Corner",
+  "block.voidfurniture.birch_short_table_corner": "Birch Short Table Corner",
+  "block.voidfurniture.spruce_short_table_corner": "Spruce Short Table Corner",
+  "block.voidfurniture.jungle_short_table_corner": "Jungle Short Table Corner",
+  "block.voidfurniture.dark_oak_short_table_corner": "Dark Oak Short Table Corner",
+  "block.voidfurniture.acacia_short_table_corner": "Acacia Short Table Corner",
+  "block.voidfurniture.crimson_short_table_corner": "Crimson Short Table Corner",
+  "block.voidfurniture.warped_short_table_corner": "Warped Short Table Corner",
+  "block.voidfurniture.oak_short_table_edge": "Oak Short Table Edge",
+  "block.voidfurniture.birch_short_table_edge": "Birch Short Table Edge",
+  "block.voidfurniture.spruce_short_table_edge": "Spruce Short Table Edge",
+  "block.voidfurniture.jungle_short_table_edge": "Jungle Short Table Edge",
+  "block.voidfurniture.dark_oak_short_table_edge": "Dark Oak Short Table Edge",
+  "block.voidfurniture.acacia_short_table_edge": "Acacia Short Table Edge",
+  "block.voidfurniture.crimson_short_table_edge": "Crimson Short Table Edge",
+  "block.voidfurniture.warped_short_table_edge": "Warped Short Table Edge",
 
   "block.voidfurniture.plant_pot": "Plant Pot",
   "block.voidfurniture.white_plant_pot": "White Plant Pot",
@@ -89,8 +113,7 @@
   "block.voidfurniture.black_floor_cushion": "Black Floor Cushion",
 
   "block.voidfurniture.book_stack": "Stack of Books",
-  
-  
+
   "block.voidfurniture.white_fairy_light": "White Fairy Light",
   "block.voidfurniture.orange_fairy_light": "Orange Fairy Light",
   "block.voidfurniture.magenta_fairy_light": "Magenta Fairy Light",
@@ -106,5 +129,7 @@
   "block.voidfurniture.brown_fairy_light": "Brown Fairy Light",
   "block.voidfurniture.green_fairy_light": "Green Fairy Light",
   "block.voidfurniture.red_fairy_light": "Red Fairy Light",
-  "block.voidfurniture.black_fairy_light": "Black Fairy Light"
+  "block.voidfurniture.black_fairy_light": "Black Fairy Light",
+
+  "block.voidfurniture.candlestick": "Candlestick"
 }
