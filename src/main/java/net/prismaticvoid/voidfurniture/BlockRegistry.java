@@ -14,27 +14,6 @@ import java.util.function.ToIntFunction;
 
 public class BlockRegistry {
     public static final HashMap<String, Block> BLOCKS = new HashMap<>();
-    // Chairs
-
-
-
-    // Campfires
-/*    public static final BlockEntityType<CampfireBlockEntity> CAMPFIRE_BLOCK_ENTITY;
-
-    public static final CampfireBlock OAK_CAMPFIRE = registerBlockWithItem("oak_campfire", new CampfireBlock(true, 1,
-            FabricBlockSettings.of(Material.WOOD, MapColor.SPRUCE_BROWN).nonOpaque().strength(2.0F).sounds(BlockSoundGroup.WOOD).luminance(createLightLevelFromLitBlockState(15))));
-            */
-
-
-    static {
-        /*
-        CAMPFIRE_BLOCK_ENTITY = Registry.register(
-                Registry.BLOCK_ENTITY_TYPE,
-                new Identifier("voidfurniture", "campfire"),
-                FabricBlockEntityTypeBuilder.create(CampfireBlockEntity::new, OAK_CAMPFIRE).build()
-        );
-         */
-    }
 
     public static void init() {
         registerWoodenBlock(
@@ -99,12 +78,23 @@ public class BlockRegistry {
                 (FloorCushionBlock::new)
         );
 
-        BLOCKS.put("book_stack", registerBlockWithItem("book_stack", new BookStackBlock(FabricBlockSettings.of(Material.WOOL).breakInstantly().nonOpaque())));
+        registerBlockWithItem("book_stack", new BookStackBlock(
+                FabricBlockSettings.of(Material.WOOL)
+                        .breakInstantly()
+                        .nonOpaque())
+        );
 
         registerDyedBlock(
                 "fairy_light",
                 FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
                 (FairyLightBlock::new)
+        );
+
+        registerBlockWithItem("candlestick", new CandlestickBlock(
+                FabricBlockSettings.of(Material.DECORATION)
+                        .breakInstantly()
+                        .nonOpaque()
+                        .luminance(createLightLevelFromLitBlockState(12)))
         );
     }
 

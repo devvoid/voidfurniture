@@ -1,4 +1,5 @@
 {
+	"parent": "block/block",
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "block/oak_planks",
@@ -77,28 +78,5 @@
 				"down": {"uv": [0, 0, 14, 1], "texture": "#0"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"firstperson_righthand": {
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"firstperson_lefthand": {
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"ground": {
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"gui": {
-			"rotation": [15, 135, 0],
-			"translation": [0, -2, 0],
-			"scale": [0.5, 0.5, 0.5]
-		},
-		"fixed": {
-			"rotation": [0, -90, 0],
-			"scale": [0.5, 0.5, 0.5]
-		}
-	}
+	]
 }

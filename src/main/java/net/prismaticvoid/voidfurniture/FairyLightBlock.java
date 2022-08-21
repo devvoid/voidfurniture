@@ -19,7 +19,7 @@ import net.minecraft.world.WorldView;
 public class FairyLightBlock extends HorizontalConnectingBlock {
     public FairyLightBlock(Settings settings) {
         super(2.0F, 2.0F, 16.0F, 16.0F, 0.0F, settings);
-        
+
         this.setDefaultState(
                 this.stateManager.getDefaultState()
                         .with(NORTH, false)

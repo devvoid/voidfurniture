@@ -4,6 +4,14 @@
 - Make chairs and floor cushions break if the block below them is invalid.
 - Better bounding boxes for book stacks and fairy lights
 
+Needs recipe:
+	- Short tables
+
+Needs loot table:
+	- Short tables
+	- Bookstack
+	- Candlestick
+
 ## Future ideas:
 - Trunk: A little trunk, like what you'd see at the foot of a bed or something. Leather,
   with gold clasps around the edge. Smaller than a single block by a fair bit. Holds the
