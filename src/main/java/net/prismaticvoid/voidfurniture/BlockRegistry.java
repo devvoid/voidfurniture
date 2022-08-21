@@ -13,6 +13,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.LoggerFactory;
 
+import java.util.function.Function;
 import java.util.function.ToIntFunction;
 import java.util.logging.Logger;
 
@@ -138,16 +139,20 @@ public class BlockRegistry {
     }
 
     public static void init() {
-        registerDyedItem("plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F)));
+        registerDyedBlock(
+                "plant_pot",
+                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F),
+                (fabricBlockSettings) -> {return new Block(fabricBlockSettings);}
+        );
     }
 
-    private static <B extends Block> void registerDyedItem(String name, B block) {
+    private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
         String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
         for (int i = 0; i < types.length; i++) {
             var new_name = types[i] + "_" + name;
-            VoidFurnitureMod.LOGGER.info(new_name);
-            registerBlockWithItem(new_name, block);
+
+            registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
         }
     }
 
