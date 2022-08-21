@@ -26,6 +26,15 @@
   "block.voidfurniture.crimson_table_corner": "Crimson Table Corner",
   "block.voidfurniture.warped_table_center": "Warped Table Center",
   "block.voidfurniture.warped_table_corner": "Warped Table Corner",
+  
+  "block.voidfurniture.oak_table_edge": "Oak Table Edge",
+  "block.voidfurniture.birch_table_edge": "Birch Table Edge",
+  "block.voidfurniture.spruce_table_edge": "Spruce Table Edge",
+  "block.voidfurniture.jungle_table_edge": "Jungle Table Edge",
+  "block.voidfurniture.dark_oak_table_edge": "Dark Oak Table Edge",
+  "block.voidfurniture.acacia_table_edge": "Acacia Table Edge",
+  "block.voidfurniture.crimson_table_edge": "Crimson Table Edge",
+  "block.voidfurniture.warped_table_edge": "Warped Table Edge",
 
   "block.voidfurniture.plant_pot": "Plant Pot",
   "block.voidfurniture.white_plant_pot": "White Plant Pot",
@@ -43,5 +52,22 @@
   "block.voidfurniture.brown_plant_pot": "Brown Plant Pot",
   "block.voidfurniture.green_plant_pot": "Green Plant Pot",
   "block.voidfurniture.red_plant_pot": "Red Plant Pot",
-  "block.voidfurniture.black_plant_pot": "Black Plant Pot"
+  "block.voidfurniture.black_plant_pot": "Black Plant Pot",
+
+  "block.voidfurniture.white_floor_cushion": "White Floor Cushion",
+  "block.voidfurniture.orange_floor_cushion": "Orange Floor Cushion",
+  "block.voidfurniture.magenta_floor_cushion": "Magenta Floor Cushion",
+  "block.voidfurniture.light_blue_floor_cushion": "Light Blue Floor Cushion",
+  "block.voidfurniture.yellow_floor_cushion": "Yellow Floor Cushion",
+  "block.voidfurniture.lime_floor_cushion": "Lime Floor Cushion",
+  "block.voidfurniture.pink_floor_cushion": "Pink Floor Cushion",
+  "block.voidfurniture.gray_floor_cushion": "Gray Floor Cushion",
+  "block.voidfurniture.light_gray_floor_cushion": "Light Gray Floor Cushion",
+  "block.voidfurniture.cyan_floor_cushion": "Cyan Floor Cushion",
+  "block.voidfurniture.purple_floor_cushion": "Purple Floor Cushion",
+  "block.voidfurniture.blue_floor_cushion": "Blue Floor Cushion",
+  "block.voidfurniture.brown_floor_cushion": "Brown Floor Cushion",
+  "block.voidfurniture.green_floor_cushion": "Green Floor Cushion",
+  "block.voidfurniture.red_floor_cushion": "Red Floor Cushion",
+  "block.voidfurniture.black_floor_cushion": "Black Floor Cushion"
 }
