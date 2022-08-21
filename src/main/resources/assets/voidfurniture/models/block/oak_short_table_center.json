@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/base_short_table_center",
+  "textures": {
+    "0": "minecraft:block/oak_planks",
+    "particle": "minecraft:block/oak_planks"
+  }
+}

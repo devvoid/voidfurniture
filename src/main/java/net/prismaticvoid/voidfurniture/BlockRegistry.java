@@ -61,6 +61,24 @@ public class BlockRegistry {
                 TableEdgeBlock::new
         );
 
+        registerWoodenBlock(
+                "short_table_center",
+                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                ShortTableCenterBlock::new
+        );
+
+        registerWoodenBlock(
+                "short_table_corner",
+                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                ShortTableCornerBlock::new
+        );
+
+        registerWoodenBlock(
+                "short_table_edge",
+                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                ShortTableEdgeBlock::new
+        );
+
         BLOCKS.put("plant_pot", registerBlockWithItem("plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F))));
 
         registerDyedBlock(
@@ -77,7 +95,7 @@ public class BlockRegistry {
 
         registerDyedBlock(
                 "floor_cushion",
-                FabricBlockSettings.of(Material.WOOL).strength(0.8f),
+                FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
                 (FloorCushionBlock::new)
         );
 

@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/base_short_table_corner",
+  "textures": {
+    "0": "minecraft:block/crimson_planks",
+    "particle": "minecraft:block/crimson_planks"
+  }
+}
