@@ -1,29 +1,7 @@
 {
   "replace": "false",
   "values": [
-    "voidfurniture:oak_chair",
-    "voidfurniture:birch_chair",
-    "voidfurniture:spruce_chair",
-    "voidfurniture:jungle_chair",
-    "voidfurniture:acacia_chair",
-    "voidfurniture:dark_oak_chair",
-    "voidfurniture:crimson_chair",
-    "voidfurniture:warped_chair",
-    "voidfurniture:oak_table_center",
-    "voidfurniture:birch_table_center",
-    "voidfurniture:spruce_table_center",
-    "voidfurniture:jungle_table_center",
-    "voidfurniture:acacia_table_center",
-    "voidfurniture:dark_oak_table_center",
-    "voidfurniture:crimson_table_center",
-    "voidfurniture:warped_table_center",
-    "voidfurniture:oak_table_corner",
-    "voidfurniture:birch_table_corner",
-    "voidfurniture:spruce_table_corner",
-    "voidfurniture:jungle_table_corner",
-    "voidfurniture:acacia_table_corner",
-    "voidfurniture:dark_oak_table_corner",
-    "voidfurniture:crimson_table_corner",
-    "voidfurniture:warped_table_corner"
+    "#voidfurniture:chairs",
+    "#voidfurniture:tables"
   ]
 }

@@ -70,10 +70,18 @@ public class BlockRegistry {
         );
 
         registerDyedBlock(
+                "glazed_plant_pot",
+                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F),
+                Block::new
+        );
+
+        registerDyedBlock(
                 "floor_cushion",
                 FabricBlockSettings.of(Material.WOOL).strength(0.8f),
                 (FloorCushionBlock::new)
         );
+
+        BLOCKS.put("book_stack", registerBlockWithItem("book_stack", new BookStackBlock(FabricBlockSettings.of(Material.WOOL).breakInstantly().nonOpaque())));
     }
 
     private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {

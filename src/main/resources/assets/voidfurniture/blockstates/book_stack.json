@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,books=1,tidy=false": { "model": "voidfurniture:block/book_stack_1", "uvlock": false },
+    "facing=north,books=2,tidy=false": { "model": "voidfurniture:block/book_stack_2", "uvlock": false },
+    "facing=north,books=3,tidy=false": { "model": "voidfurniture:block/book_stack_3", "uvlock": false },
+    "facing=east,books=1,tidy=false":  { "model": "voidfurniture:block/book_stack_1", "y":  90, "uvlock": false },
+    "facing=east,books=2,tidy=false":  { "model": "voidfurniture:block/book_stack_2", "y":  90, "uvlock": false },
+    "facing=east,books=3,tidy=false":  { "model": "voidfurniture:block/book_stack_3", "y":  90, "uvlock": false },
+    "facing=south,books=1,tidy=false": { "model": "voidfurniture:block/book_stack_1", "y": 180, "uvlock": false },
+    "facing=south,books=2,tidy=false": { "model": "voidfurniture:block/book_stack_2", "y": 180, "uvlock": false },
+    "facing=south,books=3,tidy=false": { "model": "voidfurniture:block/book_stack_3", "y": 180, "uvlock": false },
+    "facing=west,books=1,tidy=false":  { "model": "voidfurniture:block/book_stack_1", "y": 270, "uvlock": false },
+    "facing=west,books=2,tidy=false":  { "model": "voidfurniture:block/book_stack_2", "y": 270, "uvlock": false },
+    "facing=west,books=3,tidy=false":  { "model": "voidfurniture:block/book_stack_3", "y": 270, "uvlock": false },
+    "facing=north,books=1,tidy=true": { "model": "voidfurniture:block/book_stack_1", "uvlock": false },
+    "facing=north,books=2,tidy=true": { "model": "voidfurniture:block/book_stack_2_tidy", "uvlock": false },
+    "facing=north,books=3,tidy=true": { "model": "voidfurniture:block/book_stack_3_tidy", "uvlock": false },
+    "facing=east,books=1,tidy=true":  { "model": "voidfurniture:block/book_stack_1", "y":  90, "uvlock": false },
+    "facing=east,books=2,tidy=true":  { "model": "voidfurniture:block/book_stack_2_tidy", "y":  90, "uvlock": false },
+    "facing=east,books=3,tidy=true":  { "model": "voidfurniture:block/book_stack_3_tidy", "y":  90, "uvlock": false },
+    "facing=south,books=1,tidy=true": { "model": "voidfurniture:block/book_stack_1", "y": 180, "uvlock": false },
+    "facing=south,books=2,tidy=true": { "model": "voidfurniture:block/book_stack_2_tidy", "y": 180, "uvlock": false },
+    "facing=south,books=3,tidy=true": { "model": "voidfurniture:block/book_stack_3_tidy", "y": 180, "uvlock": false },
+    "facing=west,books=1,tidy=true":  { "model": "voidfurniture:block/book_stack_1", "y": 270, "uvlock": false },
+    "facing=west,books=2,tidy=true":  { "model": "voidfurniture:block/book_stack_2_tidy", "y": 270, "uvlock": false },
+    "facing=west,books=3,tidy=true":  { "model": "voidfurniture:block/book_stack_3_tidy", "y": 270, "uvlock": false }
+  }
+}

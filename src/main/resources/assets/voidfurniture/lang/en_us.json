@@ -54,6 +54,23 @@
   "block.voidfurniture.red_plant_pot": "Red Plant Pot",
   "block.voidfurniture.black_plant_pot": "Black Plant Pot",
 
+  "block.voidfurniture.white_glazed_plant_pot": "White Glazed Plant Pot",
+  "block.voidfurniture.orange_glazed_plant_pot": "Orange Glazed Plant Pot",
+  "block.voidfurniture.magenta_glazed_plant_pot": "Magenta Glazed Plant Pot",
+  "block.voidfurniture.light_blue_glazed_plant_pot": "Light Blue Glazed Plant Pot",
+  "block.voidfurniture.yellow_glazed_plant_pot": "Yellow Glazed Plant Pot",
+  "block.voidfurniture.lime_glazed_plant_pot": "Lime Glazed Plant Pot",
+  "block.voidfurniture.pink_glazed_plant_pot": "Pink Glazed Plant Pot",
+  "block.voidfurniture.gray_glazed_plant_pot": "Gray Glazed Plant Pot",
+  "block.voidfurniture.light_gray_glazed_plant_pot": "Light Gray Glazed Plant Pot",
+  "block.voidfurniture.cyan_glazed_plant_pot": "Cyan Glazed Plant Pot",
+  "block.voidfurniture.purple_glazed_plant_pot": "Purple Glazed Plant Pot",
+  "block.voidfurniture.blue_glazed_plant_pot": "Blue Glazed Plant Pot",
+  "block.voidfurniture.brown_glazed_plant_pot": "Brown Glazed Plant Pot",
+  "block.voidfurniture.green_glazed_plant_pot": "Green Glazed Plant Pot",
+  "block.voidfurniture.red_glazed_plant_pot": "Red Glazed Plant Pot",
+  "block.voidfurniture.black_glazed_plant_pot": "Black Glazed Plant Pot",
+
   "block.voidfurniture.white_floor_cushion": "White Floor Cushion",
   "block.voidfurniture.orange_floor_cushion": "Orange Floor Cushion",
   "block.voidfurniture.magenta_floor_cushion": "Magenta Floor Cushion",
@@ -69,5 +86,7 @@
   "block.voidfurniture.brown_floor_cushion": "Brown Floor Cushion",
   "block.voidfurniture.green_floor_cushion": "Green Floor Cushion",
   "block.voidfurniture.red_floor_cushion": "Red Floor Cushion",
-  "block.voidfurniture.black_floor_cushion": "Black Floor Cushion"
+  "block.voidfurniture.black_floor_cushion": "Black Floor Cushion",
+
+  "block.voidfurniture.book_stack": "Stack of Books"
 }

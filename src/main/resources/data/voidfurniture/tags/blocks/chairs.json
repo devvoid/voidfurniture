@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "voidfurniture:oak_chair",
+    "voidfurniture:birch_chair",
+    "voidfurniture:spruce_chair",
+    "voidfurniture:jungle_chair",
+    "voidfurniture:acacia_chair",
+    "voidfurniture:dark_oak_chair",
+    "voidfurniture:crimson_chair",
+    "voidfurniture:warped_chair"
+  ]
+}
