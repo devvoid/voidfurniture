@@ -100,6 +100,12 @@ public class BlockRegistry {
         );
 
         BLOCKS.put("book_stack", registerBlockWithItem("book_stack", new BookStackBlock(FabricBlockSettings.of(Material.WOOL).breakInstantly().nonOpaque())));
+
+        registerDyedBlock(
+                "fairy_light",
+                FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
+                (FairyLightBlock::new)
+        );
     }
 
     private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {

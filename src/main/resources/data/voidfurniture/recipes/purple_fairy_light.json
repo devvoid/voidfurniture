@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xxx",
+    "yzy"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:string"
+    },
+
+    "y": {
+      "item": "minecraft:glowstone_dust"
+    },
+	
+	"z": {
+		"item": "minecraft:purple_dye"
+	}
+  },
+  "result": {
+    "item": "voidfurniture:purple_fairy_light",
+    "count": 8
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "voidfurniture",
-  "version": "${version}",
+  "version": "1.0.0",
 
   "name": "VoidFurniture",
   "description": "Adds some furniture items.",

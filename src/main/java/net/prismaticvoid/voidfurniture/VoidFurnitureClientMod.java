@@ -17,6 +17,24 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+                BlockRegistry.BLOCKS.get("white_fairy_light"),
+                BlockRegistry.BLOCKS.get("orange_fairy_light"),
+                BlockRegistry.BLOCKS.get("magenta_fairy_light"),
+                BlockRegistry.BLOCKS.get("light_blue_fairy_light"),
+                BlockRegistry.BLOCKS.get("yellow_fairy_light"),
+                BlockRegistry.BLOCKS.get("lime_fairy_light"),
+                BlockRegistry.BLOCKS.get("pink_fairy_light"),
+                BlockRegistry.BLOCKS.get("gray_fairy_light"),
+                BlockRegistry.BLOCKS.get("light_gray_fairy_light"),
+                BlockRegistry.BLOCKS.get("cyan_fairy_light"),
+                BlockRegistry.BLOCKS.get("purple_fairy_light"),
+                BlockRegistry.BLOCKS.get("blue_fairy_light"),
+                BlockRegistry.BLOCKS.get("brown_fairy_light"),
+                BlockRegistry.BLOCKS.get("green_fairy_light"),
+                BlockRegistry.BLOCKS.get("red_fairy_light"),
+                BlockRegistry.BLOCKS.get("black_fairy_light")
+        );
         //BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
         //BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
     }
