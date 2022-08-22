@@ -16,45 +16,49 @@ public class BlockRegistry {
     public static final HashMap<String, Block> BLOCKS = new HashMap<>();
 
     public static void init() {
+        var woodBlockSettings = FabricBlockSettings.of(Material.WOOD)
+                .strength(2.0f, 3.0f)
+                .sounds(BlockSoundGroup.WOOD);
+
         registerWoodenBlock(
                 "chairs/base_chair",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 ChairBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_table_center",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 TableCenterBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_table_corner",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 TableCornerBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_table_edge",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 TableEdgeBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_short_table_center",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 ShortTableCenterBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_short_table_corner",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 ShortTableCornerBlock::new
         );
 
         registerWoodenBlock(
                 "tables/base_short_table_edge",
-                FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
+                woodBlockSettings.nonOpaque(),
                 ShortTableEdgeBlock::new
         );
 
@@ -90,21 +94,50 @@ public class BlockRegistry {
                 (FairyLightBlock::new)
         );
 
-        registerBlockWithItem("candlestick", new CandlestickBlock(
+        registerBlockWithItem("candlesticks/gold_candlestick", new CandlestickBlock(
                 FabricBlockSettings.of(Material.DECORATION)
                         .breakInstantly()
                         .nonOpaque()
                         .luminance(createLightLevelFromLitBlockState(12)))
+        );
+
+        registerDyedBlock("candlesticks/base_gold_candlestick",
+                FabricBlockSettings.of(Material.DECORATION)
+                        .breakInstantly()
+                        .nonOpaque()
+                        .luminance(createLightLevelFromLitBlockState(12)),
+                CandlestickBlock::new
+        );
+
+        registerBlockWithItem("candlesticks/iron_candlestick", new CandlestickBlock(
+                FabricBlockSettings.of(Material.DECORATION)
+                        .breakInstantly()
+                        .nonOpaque()
+                        .luminance(createLightLevelFromLitBlockState(12)))
+        );
+
+        registerDyedBlock("candlesticks/base_iron_candlestick",
+                FabricBlockSettings.of(Material.DECORATION)
+                        .breakInstantly()
+                        .nonOpaque()
+                        .luminance(createLightLevelFromLitBlockState(12)),
+                CandlestickBlock::new
+        );
+
+        registerWoodenBlock(
+                "benches/base_bench",
+                woodBlockSettings.nonOpaque(),
+                BenchBlock::new
         );
     }
 
     private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
         String[] types = {"oak", "birch", "spruce", "jungle", "acacia", "dark_oak", "crimson", "warped"};
 
-        for (int i = 0; i < types.length; i++) {
-            var new_name = name.replace("base", types[i]);
+        for (String type : types) {
+            var new_name = name.replace("base", type);
 
-            registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
+            registerBlockWithItem(new_name, factory.apply(settings));
         }
     }
 

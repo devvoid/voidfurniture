@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:crimson_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:benches/crimson_bench",
+    "count": 2
+  }
+}

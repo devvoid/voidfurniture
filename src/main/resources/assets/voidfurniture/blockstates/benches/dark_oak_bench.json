@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "facing=north,left=false,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_both"
+    },
+    "facing=north,left=true,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_right"
+    },
+    "facing=north,left=false,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_left"
+    },
+    "facing=north,left=true,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_none"
+    },
+
+    "facing=east,left=false,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_both",
+      "y": 90
+    },
+    "facing=east,left=true,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_right",
+      "y": 90
+    },
+    "facing=east,left=false,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_left",
+      "y": 90
+    },
+    "facing=east,left=true,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_none",
+      "y": 90
+    },
+
+    "facing=south,left=false,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_both",
+      "y": 180
+    },
+    "facing=south,left=true,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_right",
+      "y": 180
+    },
+    "facing=south,left=false,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_left",
+      "y": 180
+    },
+    "facing=south,left=true,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_none",
+      "y": 180
+    },
+
+    "facing=west,left=false,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_both",
+      "y": 270
+    },
+    "facing=west,left=true,right=false": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_right",
+      "y": 270
+    },
+    "facing=west,left=false,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_left",
+      "y": 270
+    },
+    "facing=west,left=true,right=true": {
+      "model": "voidfurniture:block/benches/dark_oak_bench_none",
+      "y": 270
+    }
+  }
+}

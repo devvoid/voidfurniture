@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:acacia_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:benches/acacia_bench",
+    "count": 2
+  }
+}

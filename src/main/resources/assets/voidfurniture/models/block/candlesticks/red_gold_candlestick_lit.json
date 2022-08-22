@@ -1,0 +1,6 @@
+{
+  "parent": "voidfurniture:block/candlesticks/gold_candlestick_lit",
+  "textures": {
+    "0": "minecraft:block/red_candle"
+  }
+}

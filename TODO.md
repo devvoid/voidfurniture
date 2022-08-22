@@ -2,11 +2,6 @@
 Needs recipe:
 	- Short tables
 
-Needs loot table:
-	- Short tables
-	- Bookstack
-	- Candlestick
-
 ## Probably Should
 - Better bounding boxes for book stacks and fairy lights
 - Make chairs and floor cushions break if the block below them is invalid

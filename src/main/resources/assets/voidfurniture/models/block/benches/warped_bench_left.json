@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/benches/base_bench_left",
+  "textures": {
+    "0": "block/warped_planks",
+	"particles": "block/warped_planks"
+  }
+}

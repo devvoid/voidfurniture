@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyx",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:iron_nugget"
+    },
+    "y": {
+      "item": "minecraft:candle"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:candlesticks/light_blue_iron_candlestick",
+    "count": 1
+  }
+}
