@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "y  "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:spruce_planks"
+    },
+
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/spruce_table_corner",
+    "count": 2
+  }
+}

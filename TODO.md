@@ -1,9 +1,4 @@
-## TODO:
-- Short tables need crafting recipes and loot tables
-- Book stacks need a loot table
-- Make chairs and floor cushions break if the block below them is invalid.
-- Better bounding boxes for book stacks and fairy lights
-
+## Necessary
 Needs recipe:
 	- Short tables
 
@@ -11,6 +6,15 @@ Needs loot table:
 	- Short tables
 	- Bookstack
 	- Candlestick
+
+## Probably Should
+- Better bounding boxes for book stacks and fairy lights
+- Make chairs and floor cushions break if the block below them is invalid
+- Fairy lights don't break themselves if the block above is invalid; why?
+
+## Would Be Nice
+- Fix the campfire block entity stuff so you can add the custom campfires
+
 
 ## Future ideas:
 - Trunk: A little trunk, like what you'd see at the foot of a bed or something. Leather,

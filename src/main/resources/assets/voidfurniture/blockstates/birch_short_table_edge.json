@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "voidfurniture:block/birch_short_table_edge", "uvlock": true },
-    "facing=east":  { "model": "voidfurniture:block/birch_short_table_edge", "y":  90, "uvlock": true },
-    "facing=south": { "model": "voidfurniture:block/birch_short_table_edge", "y": 180, "uvlock": true },
-    "facing=west":  { "model": "voidfurniture:block/birch_short_table_edge", "y": 270, "uvlock": true }
-  }
-}

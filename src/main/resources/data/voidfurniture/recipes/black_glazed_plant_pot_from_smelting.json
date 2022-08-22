@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-	"item": "voidfurniture:black_plant_pot"
-  },
-  "result": "voidfurniture:black_glazed_plant_pot",
-  "experience": 0
-}

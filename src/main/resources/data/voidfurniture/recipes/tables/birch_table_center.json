@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "   "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:birch_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/birch_table_center",
+    "count": 4
+  }
+}

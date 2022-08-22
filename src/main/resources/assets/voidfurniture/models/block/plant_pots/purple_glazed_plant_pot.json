@@ -1,0 +1,6 @@
+{
+  "parent": "voidfurniture:block/plant_pots/plant_pot",
+  "textures": {
+    "0": "block/purple_glazed_terracotta"
+  }
+}

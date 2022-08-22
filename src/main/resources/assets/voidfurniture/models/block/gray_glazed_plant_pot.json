@@ -1,6 +1,0 @@
-{
-  "parent": "voidfurniture:block/plant_pot",
-  "textures": {
-    "0": "block/gray_glazed_terracotta"
-  }
-}

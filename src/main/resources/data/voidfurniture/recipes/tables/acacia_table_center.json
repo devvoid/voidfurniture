@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "   "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:acacia_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/acacia_table_center",
+    "count": 4
+  }
+}

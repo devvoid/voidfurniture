@@ -17,63 +17,63 @@ public class BlockRegistry {
 
     public static void init() {
         registerWoodenBlock(
-                "chair",
+                "chairs/base_chair",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 ChairBlock::new
         );
 
         registerWoodenBlock(
-                "table_center",
+                "tables/base_table_center",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 TableCenterBlock::new
         );
 
         registerWoodenBlock(
-                "table_corner",
+                "tables/base_table_corner",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 TableCornerBlock::new
         );
 
         registerWoodenBlock(
-                "table_edge",
+                "tables/base_table_edge",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 TableEdgeBlock::new
         );
 
         registerWoodenBlock(
-                "short_table_center",
+                "tables/base_short_table_center",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 ShortTableCenterBlock::new
         );
 
         registerWoodenBlock(
-                "short_table_corner",
+                "tables/base_short_table_corner",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 ShortTableCornerBlock::new
         );
 
         registerWoodenBlock(
-                "short_table_edge",
+                "tables/base_short_table_edge",
                 FabricBlockSettings.of(Material.WOOD).hardness(2f).nonOpaque(),
                 ShortTableEdgeBlock::new
         );
 
-        BLOCKS.put("plant_pot", registerBlockWithItem("plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F))));
+        registerBlockWithItem("plant_pots/plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)));
 
         registerDyedBlock(
-                "plant_pot",
+                "plant_pots/base_plant_pot",
                 FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F),
                 Block::new
         );
 
         registerDyedBlock(
-                "glazed_plant_pot",
+                "plant_pots/base_glazed_plant_pot",
                 FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F),
                 Block::new
         );
 
         registerDyedBlock(
-                "floor_cushion",
+                "floor_cushions/base_floor_cushion",
                 FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
                 (FloorCushionBlock::new)
         );
@@ -85,7 +85,7 @@ public class BlockRegistry {
         );
 
         registerDyedBlock(
-                "fairy_light",
+                "fairy_lights/base_fairy_light",
                 FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
                 (FairyLightBlock::new)
         );
@@ -102,7 +102,7 @@ public class BlockRegistry {
         String[] types = {"oak", "birch", "spruce", "jungle", "acacia", "dark_oak", "crimson", "warped"};
 
         for (int i = 0; i < types.length; i++) {
-            var new_name = types[i] + "_" + name;
+            var new_name = name.replace("base", types[i]);
 
             registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
         }
@@ -112,7 +112,7 @@ public class BlockRegistry {
         String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
         for (int i = 0; i < types.length; i++) {
-            var new_name = types[i] + "_" + name;
+            var new_name = name.replace("base", types[i]);
 
             registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
         }

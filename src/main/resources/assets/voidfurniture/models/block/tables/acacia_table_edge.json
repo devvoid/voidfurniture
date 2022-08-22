@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/tables/base_table_edge",
+  "textures": {
+    "0": "minecraft:block/acacia_planks",
+    "particle": "minecraft:block/acacia_planks"
+  }
+}

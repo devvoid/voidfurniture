@@ -1,0 +1,7 @@
+{
+	"parent": "voidfurniture:block/chairs/base_chair_scooted",
+	"textures": {
+		"0": "minecraft:block/crimson_planks",
+		"particle": "minecraft:block/crimson_planks"
+	}
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "yy "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:jungle_planks"
+    },
+
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/jungle_table_edge",
+    "count": 2
+  }
+}

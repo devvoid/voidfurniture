@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x x",
+    "xyx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:white_glazed_terracotta"
+    },
+    "y": {
+      "item": "minecraft:dirt"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:plant_pots/white_glazed_plant_pot",
+    "count": 2
+  }
+}

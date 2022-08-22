@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+		"item": "minecraft:orange_dye"
+	},
+	{
+		"tag": "voidfurniture:plant_pots"
+	}
+  ],
+  "result": {
+    "item": "voidfurniture:plant_pots/orange_plant_pot",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "y  "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:acacia_planks"
+    },
+
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/acacia_table_corner",
+    "count": 2
+  }
+}

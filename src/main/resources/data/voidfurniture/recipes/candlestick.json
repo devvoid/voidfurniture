@@ -10,7 +10,7 @@
       "item": "minecraft:gold_nugget"
     },
     "y": {
-      "item": "minecraft:candle"
+      "tag": "minecraft:candles"
     }
   },
   "result": {

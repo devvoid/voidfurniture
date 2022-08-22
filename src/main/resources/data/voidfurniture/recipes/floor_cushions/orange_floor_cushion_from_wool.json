@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "xx "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:orange_wool"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:floor_cushions/orange_floor_cushion",
+    "count": 4
+  }
+}

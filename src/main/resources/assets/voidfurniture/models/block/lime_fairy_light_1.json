@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/base_fairy_light",
-  "textures": {
-    "1": "voidfurniture:block/lime_fairy_light_1",
-    "particle": "voidfurniture:block/lime_fairy_light_1"
-  }
-}

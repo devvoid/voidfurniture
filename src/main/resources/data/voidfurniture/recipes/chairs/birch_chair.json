@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x  ",
+    "xxx",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:birch_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:chairs/birch_chair",
+    "count": 2
+  }
+}

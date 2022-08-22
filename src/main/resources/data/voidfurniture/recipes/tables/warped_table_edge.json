@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "xx ",
+    "yy "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:warped_planks"
+    },
+
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:tables/warped_table_edge",
+    "count": 2
+  }
+}
