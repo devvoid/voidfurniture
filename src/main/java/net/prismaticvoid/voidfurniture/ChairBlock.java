@@ -18,8 +18,41 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
+import java.util.HashMap;
+
 public class ChairBlock extends Block {
     public static final BooleanProperty SCOOTED = BooleanProperty.of("scooted");
+
+    private static final HashMap<Direction, VoxelShape> SHAPES = new HashMap<>();
+    private static final HashMap<Direction, VoxelShape> SHAPES_SCOOTED = new HashMap<>();
+
+    static {
+        VoxelShape chair = VoxelShapes.empty();
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.125, 0.625, 0.125));
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.875, 0, 0.875, 0.9375, 0.625, 0.9375));
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.0625, 0, 0.875, 0.125, 0.625, 0.9375));
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.875, 0, 0.0625, 0.9375, 0.625, 0.125));
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.0625, 0.625, 0.0625, 0.9375, 0.6875, 0.9375));
+        chair = VoxelShapes.union(chair, VoxelShapes.cuboid(0.0625, 0.6875, 0.875, 0.9375, 1.5625, 0.9375));
+
+        SHAPES.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, chair));
+        SHAPES.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, chair));
+        SHAPES.put(Direction.WEST, Utils.rotateShape(Direction.WEST, chair));
+        SHAPES.put(Direction.EAST, Utils.rotateShape(Direction.EAST, chair));
+
+        VoxelShape chairScooted = VoxelShapes.empty();
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.0625, 0, -0.4375, 0.125, 0.625, -0.375));
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.875, 0, 0.375, 0.9375, 0.625, 0.4375));
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.0625, 0, 0.375, 0.125, 0.625, 0.4375));
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.875, 0, -0.4375, 0.9375, 0.625, -0.375));
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.0625, 0.625, -0.4375, 0.9375, 0.6875, 0.4375));
+        chairScooted = VoxelShapes.union(chairScooted, VoxelShapes.cuboid(0.0625, 0.6875, 0.375, 0.9375, 1.5625, 0.4375));
+
+        SHAPES_SCOOTED.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, chairScooted));
+        SHAPES_SCOOTED.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, chairScooted));
+        SHAPES_SCOOTED.put(Direction.WEST, Utils.rotateShape(Direction.WEST, chairScooted));
+        SHAPES_SCOOTED.put(Direction.EAST, Utils.rotateShape(Direction.EAST, chairScooted));
+    }
 
     public ChairBlock(Settings settings) {
         super(settings);
@@ -41,22 +74,10 @@ public class ChairBlock extends Block {
         var dir = state.get(Properties.HORIZONTAL_FACING);
 
         if (state.get(SCOOTED)) {
-            switch (dir) {
-                case NORTH:
-                    return Utils.make_cuboid(1, 0, -7, 14, 11, 14);
-                case SOUTH:
-                    return Utils.make_cuboid(1, 0, 9, 14, 11, 14);
-                case EAST:
-                    return Utils.make_cuboid(9, 0, 1, 14, 11, 14);
-                case WEST:
-                    return Utils.make_cuboid(-7, 0, 1, 14, 11, 14);
-                default:
-                    return VoxelShapes.fullCube();
-            }
-
+            return SHAPES_SCOOTED.get(dir);
         }
         else {
-            return Utils.make_cuboid(1, 0, 1, 14, 11, 14);
+            return SHAPES.get(dir);
         }
     }
 
@@ -66,10 +87,13 @@ public class ChairBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        boolean current = world.getBlockState(pos).get(SCOOTED);
+        if (player.isInSneakingPose()) {
+            boolean current = world.getBlockState(pos).get(SCOOTED);
 
-        world.setBlockState(pos, state.with(SCOOTED, !current));
+            world.setBlockState(pos, state.with(SCOOTED, !current));
+            return ActionResult.SUCCESS;
+        }
 
-        return ActionResult.SUCCESS;
+        return ActionResult.PASS;
     }
 }
