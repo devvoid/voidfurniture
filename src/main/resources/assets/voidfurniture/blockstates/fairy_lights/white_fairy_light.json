@@ -35,7 +35,7 @@
         "south": "true"
       },
       "apply": {
-          "model": "voidfurniture:block/fairy_lights/white_fairy_light",
+          "model": "voidfurniture:block/fairy_lights/white_fairy_light_offset",
           "y": 180,
           "uvlock": true
         }
@@ -45,7 +45,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "voidfurniture:block/fairy_lights/white_fairy_light",
+        "model": "voidfurniture:block/fairy_lights/white_fairy_light_offset",
           "y": 270,
           "uvlock": true
       }
