@@ -2,7 +2,6 @@
 
 ## Probably Should
 - Better bounding boxes for book stacks and fairy lights
-- Fairy lights don't break themselves if the block above is invalid; why?
 
 ## Would Be Nice
 - Fix the campfire block entity stuff so you can add the custom campfires
