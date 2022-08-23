@@ -2,88 +2,53 @@
   "multipart": [
     {
       "when": {
+        "north": "false",
+        "east": "false",
+        "west": "false",
+        "south": "false"
+      },
+      "apply": {
+        "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_hanging"
+      }
+    },
+    {
+      "when": {
         "north": "true"
       },
-      "apply": [
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_3",
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_2",
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_1",
+      "apply": {
+          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light",
           "uvlock": true
         }
-      ]
     },
     {
       "when": {
         "east": "true"
       },
-      "apply": [
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_3",
-          "y": 90,
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_2",
-          "y": 90,
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_2",
+      "apply": {
+          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light",
           "y": 90,
           "uvlock": true
         }
-      ]
     },
     {
       "when": {
         "south": "true"
       },
-      "apply": [
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_1",
-          "y": 180,
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_3",
-          "y": 180,
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_2",
+      "apply": {
+          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_offset",
           "y": 180,
           "uvlock": true
         }
-      ]
     },
     {
       "when": {
         "west": "true"
       },
-      "apply": [
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_1",
+      "apply": {
+        "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_offset",
           "y": 270,
           "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_2",
-          "y": 270,
-          "uvlock": true
-        },
-        {
-          "model": "voidfurniture:block/fairy_lights/cyan_fairy_light_3",
-          "y": 270,
-          "uvlock": true
-        }
-      ]
+      }
     }
   ]
 }

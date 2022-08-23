@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "voidfurniture:block/fairy_lights/light_gray_fairy_light_1"
+    "layer0": "voidfurniture:block/fairy_lights/light_gray_fairy_light"
   }
 }
