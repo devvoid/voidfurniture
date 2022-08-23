@@ -11,6 +11,8 @@
 - Trunk: A little trunk, like what you'd see at the foot of a bed or something. Leather,
   with gold clasps around the edge. Smaller than a single block by a fair bit. Holds the
   same as a chest.
+
+- Quill: Only struggle would be the feather texture... can I use vanilla's? if not, ask vern or nerd
  
 - Treasure Chest: They look like pirate chests. Otherwise the same as a regular chest.
 
