@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidfurniture:tables/spruce_short_table_edge"
+          "name": "voidfurniture:tables/short_spruce_table_edge"
         }
       ],
       "conditions": [

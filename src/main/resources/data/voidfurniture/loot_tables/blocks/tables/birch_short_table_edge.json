@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidfurniture:tables/birch_short_table_edge"
+          "name": "voidfurniture:tables/short_birch_table_edge"
         }
       ],
       "conditions": [

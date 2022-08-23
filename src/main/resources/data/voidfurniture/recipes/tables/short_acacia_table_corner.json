@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:short_tables",
+  "ingredients": [
+    {
+	  "item": "voidfurniture:tables/acacia_table_corner"
+    }
+  ],
+  "result": {
+    "item": "voidfurniture:tables/short_acacia_table_corner",
+    "count": 1
+  }
+}

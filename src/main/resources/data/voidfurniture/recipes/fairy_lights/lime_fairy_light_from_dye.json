@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:plant_pots",
+  "ingredients": [
+	{
+		"item": "minecraft:lime_dye"
+	},
+	{
+		"tag": "voidfurniture:fairy_lights"
+	}
+  ],
+  "result": {
+    "item": "voidfurniture:fairy_lights/lime_fairy_light",
+    "count": 1
+  }
+}

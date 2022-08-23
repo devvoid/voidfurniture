@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidfurniture:tables/acacia_short_table_center"
+          "name": "voidfurniture:tables/short_acacia_table_center"
         }
       ],
       "conditions": [

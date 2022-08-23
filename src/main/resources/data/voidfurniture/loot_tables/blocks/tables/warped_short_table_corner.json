@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidfurniture:tables/warped_short_table_corner"
+          "name": "voidfurniture:tables/short_warped_table_corner"
         }
       ],
       "conditions": [

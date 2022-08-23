@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:glazed_plant_pots",
   "pattern": [
     "x x",
     "xyx",

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:short_tables",
+  "ingredients": [
+    {
+	  "item": "voidfurniture:tables/short_spruce_table_center"
+    }
+  ],
+  "result": {
+    "item": "voidfurniture:tables/spruce_table_center",
+    "count": 1
+  }
+}

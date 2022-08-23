@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:plant_pots",
+  "ingredients": [
+	{
+		"item": "minecraft:gray_dye"
+	},
+	{
+		"tag": "voidfurniture:fairy_lights"
+	}
+  ],
+  "result": {
+    "item": "voidfurniture:fairy_lights/gray_fairy_light",
+    "count": 1
+  }
+}

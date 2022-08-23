@@ -1,10 +1,7 @@
 ## Necessary
-Needs recipe:
-	- Short tables
 
 ## Probably Should
 - Better bounding boxes for book stacks and fairy lights
-- Make chairs and floor cushions break if the block below them is invalid
 - Fairy lights don't break themselves if the block above is invalid; why?
 
 ## Would Be Nice

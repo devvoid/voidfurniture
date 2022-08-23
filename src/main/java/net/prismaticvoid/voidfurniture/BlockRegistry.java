@@ -45,19 +45,19 @@ public class BlockRegistry {
         );
 
         registerWoodenBlock(
-                "tables/base_short_table_center",
+                "tables/short_base_table_center",
                 woodBlockSettings.nonOpaque(),
                 ShortTableCenterBlock::new
         );
 
         registerWoodenBlock(
-                "tables/base_short_table_corner",
+                "tables/short_base_table_corner",
                 woodBlockSettings.nonOpaque(),
                 ShortTableCornerBlock::new
         );
 
         registerWoodenBlock(
-                "tables/base_short_table_edge",
+                "tables/short_base_table_edge",
                 woodBlockSettings.nonOpaque(),
                 ShortTableEdgeBlock::new
         );

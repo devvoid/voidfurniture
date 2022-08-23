@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:short_tables",
+  "ingredients": [
+    {
+	  "item": "voidfurniture:tables/jungle_table_edge"
+    }
+  ],
+  "result": {
+    "item": "voidfurniture:tables/short_jungle_table_edge",
+    "count": 1
+  }
+}

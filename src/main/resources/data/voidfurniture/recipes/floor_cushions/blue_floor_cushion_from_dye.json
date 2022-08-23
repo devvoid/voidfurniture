@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:floor_cushions",
   "ingredients": [
 	{
 		"item": "minecraft:blue_dye"

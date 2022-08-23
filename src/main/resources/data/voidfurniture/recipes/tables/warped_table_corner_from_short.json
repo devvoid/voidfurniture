@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:short_tables",
+  "ingredients": [
+    {
+	  "item": "voidfurniture:tables/short_warped_table_corner"
+    }
+  ],
+  "result": {
+    "item": "voidfurniture:tables/warped_table_corner",
+    "count": 1
+  }
+}
