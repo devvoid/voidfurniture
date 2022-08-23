@@ -24,7 +24,10 @@ public class BenchBlock extends HorizontalFacingBlock {
     private static final HashMap<Direction, Direction> LEFT_DIRECTIONS;
     private static final HashMap<Direction, Direction> RIGHT_DIRECTIONS;
 
-    private static final HashMap<Direction, VoxelShape> SHAPES;
+    private static final HashMap<Direction, VoxelShape> SHAPES_LEFT = new HashMap<>();
+    private static final HashMap<Direction, VoxelShape> SHAPES_BOTH = new HashMap<>();
+    private static final HashMap<Direction, VoxelShape> SHAPES_RIGHT = new HashMap<>();
+    private static final HashMap<Direction, VoxelShape> SHAPES_NONE = new HashMap<>();
 
     static {
         LEFT_DIRECTIONS = new HashMap<>();
@@ -39,26 +42,77 @@ public class BenchBlock extends HorizontalFacingBlock {
         RIGHT_DIRECTIONS.put(Direction.SOUTH, Direction.WEST);
         RIGHT_DIRECTIONS.put(Direction.WEST, Direction.NORTH);
 
-        SHAPES = new HashMap<>();
+        VoxelShape shapeBoth = VoxelShapes.empty();
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0, 0.0625, 0.0625, 0.625, 0.1875));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.9375, 0, 0.0625, 1, 0.625, 0.1875));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.9375, 0, 0.8125, 1, 0.625, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0, 0.8125, 0.0625, 0.625, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0.625, 0.0625, 1, 0.6875, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0.6875, 0.875, 0.0625, 1.4375, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.9375, 0.6875, 0.875, 1, 1.4375, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.6875, 0.6875, 0.875, 0.8125, 1.4375, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.4375, 0.6875, 0.875, 0.5625, 1.4375, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.1875, 0.6875, 0.875, 0.3125, 1.4375, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 1.4375, 0.875, 1, 1.6875, 0.9375));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.9375, 0.6875, 0.0625, 1, 0.9375, 0.1875));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0.9375, 0.9375, 0.0625, 1, 1, 0.875));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0.6875, 0.0625, 0.0625, 0.9375, 0.1875));
+        shapeBoth = VoxelShapes.union(shapeBoth, VoxelShapes.cuboid(0, 0.9375, 0.0625, 0.0625, 1, 0.875));
 
-        var s1 = VoxelShapes.cuboid(0, 0, 0.0625, 0.0625, 0.625, 0.1875);
-        var s2 = VoxelShapes.cuboid(0.9375, 0, 0.0625, 1, 0.625, 0.1875);
-        var s3 = VoxelShapes.cuboid(0.9375, 0, 0.8125, 1, 0.625, 0.9375);
-        var s4 = VoxelShapes.cuboid(0, 0, 0.8125, 0.0625, 0.625, 0.9375);
-        var s5 = VoxelShapes.cuboid(0, 0.625, 0.0625, 1, 0.6875, 0.9375);
-        var s6 = VoxelShapes.cuboid(0, 0.6875, 0.875, 0.0625, 1.4375, 0.9375);
-        var s7 = VoxelShapes.cuboid(0.9375, 0.6875, 0.875, 1, 1.4375, 0.9375);
-        var s8 = VoxelShapes.cuboid(0.6875, 0.6875, 0.875, 0.8125, 1.4375, 0.9375);
-        var s9 = VoxelShapes.cuboid(0.4375, 0.6875, 0.875, 0.5625, 1.4375, 0.9375);
-        var s10 = VoxelShapes.cuboid(0.1875, 0.6875, 0.875, 0.3125, 1.4375, 0.9375);
-        var s11 = VoxelShapes.cuboid(0, 1.4375, 0.875, 1, 1.6875, 0.9375);
+        SHAPES_BOTH.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, shapeBoth));
+        SHAPES_BOTH.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, shapeBoth));
+        SHAPES_BOTH.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shapeBoth));
+        SHAPES_BOTH.put(Direction.WEST, Utils.rotateShape(Direction.WEST, shapeBoth));
 
-        VoxelShape shape = VoxelShapes.union(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11);
+        VoxelShape shapeLeft = VoxelShapes.empty();
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.9375, 0, 0.0625, 1, 0.625, 0.1875));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.9375, 0, 0.8125, 1, 0.625, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0, 0.625, 0.0625, 1, 0.6875, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0, 0.6875, 0.875, 0.0625, 1.4375, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.9375, 0.6875, 0.875, 1, 1.4375, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.6875, 0.6875, 0.875, 0.8125, 1.4375, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.4375, 0.6875, 0.875, 0.5625, 1.4375, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.1875, 0.6875, 0.875, 0.3125, 1.4375, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0, 1.4375, 0.875, 1, 1.6875, 0.9375));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.9375, 0.6875, 0.0625, 1, 0.9375, 0.1875));
+        shapeLeft = VoxelShapes.union(shapeLeft, VoxelShapes.cuboid(0.9375, 0.9375, 0.0625, 1, 1, 0.875));
 
-        SHAPES.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, shape));
-        SHAPES.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, shape));
-        SHAPES.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shape));
-        SHAPES.put(Direction.WEST, Utils.rotateShape(Direction.WEST, shape));
+        SHAPES_LEFT.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, shapeLeft));
+        SHAPES_LEFT.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, shapeLeft));
+        SHAPES_LEFT.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shapeLeft));
+        SHAPES_LEFT.put(Direction.WEST, Utils.rotateShape(Direction.WEST, shapeLeft));
+
+        VoxelShape shapeRight = VoxelShapes.empty();
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0, 0.0625, 0.0625, 0.625, 0.1875));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0, 0.8125, 0.0625, 0.625, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0.625, 0.0625, 1, 0.6875, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0.6875, 0.875, 0.0625, 1.4375, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0.9375, 0.6875, 0.875, 1, 1.4375, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0.6875, 0.6875, 0.875, 0.8125, 1.4375, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0.4375, 0.6875, 0.875, 0.5625, 1.4375, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0.1875, 0.6875, 0.875, 0.3125, 1.4375, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 1.4375, 0.875, 1, 1.6875, 0.9375));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0.6875, 0.0625, 0.0625, 0.9375, 0.1875));
+        shapeRight = VoxelShapes.union(shapeRight, VoxelShapes.cuboid(0, 0.9375, 0.0625, 0.0625, 1, 0.875));
+
+        SHAPES_RIGHT.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, shapeRight));
+        SHAPES_RIGHT.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, shapeRight));
+        SHAPES_RIGHT.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shapeRight));
+        SHAPES_RIGHT.put(Direction.WEST, Utils.rotateShape(Direction.WEST, shapeRight));
+
+        VoxelShape shapeNone = VoxelShapes.empty();
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0, 0.625, 0.0625, 1, 0.6875, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0, 0.6875, 0.875, 0.0625, 1.4375, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0.9375, 0.6875, 0.875, 1, 1.4375, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0.6875, 0.6875, 0.875, 0.8125, 1.4375, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0.4375, 0.6875, 0.875, 0.5625, 1.4375, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0.1875, 0.6875, 0.875, 0.3125, 1.4375, 0.9375));
+        shapeNone = VoxelShapes.union(shapeNone, VoxelShapes.cuboid(0, 1.4375, 0.875, 1, 1.6875, 0.9375));
+
+        SHAPES_NONE.put(Direction.NORTH, Utils.rotateShape(Direction.NORTH, shapeNone));
+        SHAPES_NONE.put(Direction.SOUTH, Utils.rotateShape(Direction.SOUTH, shapeNone));
+        SHAPES_NONE.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shapeNone));
+        SHAPES_NONE.put(Direction.WEST, Utils.rotateShape(Direction.WEST, shapeNone));
     }
 
     public BenchBlock(Settings settings) {
@@ -115,6 +169,17 @@ public class BenchBlock extends HorizontalFacingBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext ctx) {
         Direction dir = state.get(FACING);
 
-        return SHAPES.get(dir);
+        if (state.get(LEFT) && state.get(RIGHT)) {
+            return SHAPES_NONE.get(dir);
+        }
+        else if (state.get(LEFT)) {
+            return SHAPES_RIGHT.get(dir);
+        }
+        else if (state.get(RIGHT)) {
+            return SHAPES_LEFT.get(dir);
+        }
+        else {
+            return SHAPES_BOTH.get(dir);
+        }
     }
 }
