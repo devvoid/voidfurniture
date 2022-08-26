@@ -36,9 +36,16 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
                 BlockRegistry.BLOCKS.get("fairy_lights/black_fairy_light")
         );
 
-        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.BLOCKS.get("ink_quill"), RenderLayer.getCutout());
+        addBlockToCutout("ink_quill");
+        addBlockToCutout("collections/teatime/plate_cookies");
+    }
 
-        // BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
-        // BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
+    public static void addBlockToCutout(String name) {
+        var b = BlockRegistry.BLOCKS.get(name);
+
+        if (b == null) {
+            VoidFurnitureMod.LOGGER.error("Invalid block " + name + " registered for cutout!");
+        }
+        BlockRenderLayerMap.INSTANCE.putBlock(b, RenderLayer.getCutout());
     }
 }

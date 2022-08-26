@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cookie"
+    },
+    {
+      "item": "voidfurniture:collections/teatime/plate_empty"
+    }
+  ],
+  "result": {
+    "item": "voidfurniture:collections/teatime/plate_cookies",
+    "count": 1
+  }
+}

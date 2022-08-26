@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture.blocks;
+package net.prismaticvoid.voidfurniture.blocks.collections;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,31 +14,17 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import net.prismaticvoid.voidfurniture.Utils;
 
-import java.util.HashMap;
-
-public class TeapotBlock extends Block {
-    private static final HashMap<Direction, VoxelShape> SHAPES;
+public class PlateBlock extends Block {
+    private static final VoxelShape SHAPE;
 
     static {
-        var s1 = VoxelShapes.cuboid(0.375, 0, 0.375, 0.625, 0.0625, 0.625);
-        var s2 = VoxelShapes.cuboid(0.3125, 0.0625, 0.3125, 0.6875, 0.3125, 0.6875);
-        var s3 = VoxelShapes.cuboid(0.375, 0.3125, 0.375, 0.625, 0.375, 0.625);
-        var s4 = VoxelShapes.cuboid(0.46875, 0.375, 0.46875, 0.53125, 0.4375, 0.53125);
-        var s5 = VoxelShapes.cuboid(0.6875, 0.0625, 0.46875, 0.8125, 0.3125, 0.53125);
-        var s6 = VoxelShapes.cuboid(0.1875, 0.125, 0.46875, 0.3125, 0.1875, 0.53125);
-        var s7 = VoxelShapes.cuboid(0.125, 0.125, 0.46875, 0.1875, 0.3125, 0.53125);
-
-        SHAPES = Utils.createRotatedShapes(VoxelShapes.union(s1, s2, s3, s4, s5, s6, s7));
+        SHAPE = VoxelShapes.cuboid(0.0625, 0, 0.0625, 0.9375, 0.0625, 0.9375);
     }
 
-    public TeapotBlock(Settings settings) {
+    public PlateBlock(Settings settings) {
         super(settings);
-        setDefaultState(
-                getStateManager().getDefaultState()
-                        .with(Properties.HORIZONTAL_FACING, Direction.NORTH)
-        );
+        setDefaultState(getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
     }
 
     @Override
@@ -48,8 +34,7 @@ public class TeapotBlock extends Block {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        var dir = state.get(Properties.HORIZONTAL_FACING);
-        return SHAPES.get(dir);
+        return SHAPE;
     }
 
     @Override

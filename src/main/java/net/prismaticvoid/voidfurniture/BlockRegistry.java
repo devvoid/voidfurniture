@@ -8,6 +8,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.Registry;
 import net.prismaticvoid.voidfurniture.blocks.*;
+import net.prismaticvoid.voidfurniture.blocks.collections.PlateBlock;
+import net.prismaticvoid.voidfurniture.blocks.collections.TeacupBlock;
+import net.prismaticvoid.voidfurniture.blocks.collections.TeapotBlock;
 
 import java.util.HashMap;
 import java.util.function.Function;
@@ -155,6 +158,14 @@ public class BlockRegistry {
         ));
 
         registerBlockWithItem("collections/teatime/teacup", new TeacupBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
+        ));
+
+        registerBlockWithItem("collections/teatime/plate_empty", new PlateBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
+        ));
+
+        registerBlockWithItem("collections/teatime/plate_cookies", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
     }
