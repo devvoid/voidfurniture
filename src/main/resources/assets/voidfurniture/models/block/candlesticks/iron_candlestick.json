@@ -1,6 +1,7 @@
 {
   "parent": "voidfurniture:block/candlesticks/gold_candlestick",
   "textures": {
-    "2": "minecraft:block/iron_block"
+    "2": "minecraft:block/iron_block",
+    "particle": "minecraft:block/iron_block"
   }
 }
