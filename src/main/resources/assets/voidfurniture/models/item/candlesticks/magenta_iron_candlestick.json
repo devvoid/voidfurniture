@@ -1,3 +1,6 @@
 {
-  "parent": "voidfurniture:block/candlesticks/magenta_iron_candlestick"
+  "parent": "voidfurniture:block/candlesticks/iron_candlestick",
+  "textures": {
+    "0": "minecraft:block/magenta_candle"
+  }
 }

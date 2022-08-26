@@ -1,5 +1,6 @@
 package net.prismaticvoid.voidfurniture;
 
+import it.unimi.dsi.fastutil.Hash;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -7,6 +8,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
+
+import java.util.HashMap;
 
 public class Utils {
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(
@@ -28,6 +31,17 @@ public class Utils {
         var zpos2 = zpos + (size_z / 16.0);
 
         return VoxelShapes.cuboid(xpos, ypos, zpos, xpos2, ypos2, zpos2);
+    }
+
+    public static HashMap<Direction, VoxelShape> createRotatedShapes(VoxelShape shape) {
+        var v = new HashMap<Direction, VoxelShape>();
+
+        v.put(Direction.NORTH, rotateShape(Direction.NORTH, shape));
+        v.put(Direction.SOUTH, rotateShape(Direction.SOUTH, shape));
+        v.put(Direction.EAST, rotateShape(Direction.EAST, shape));
+        v.put(Direction.WEST, rotateShape(Direction.WEST, shape));
+
+        return v;
     }
 
     public static VoxelShape rotateShape(Direction to, VoxelShape shape) {

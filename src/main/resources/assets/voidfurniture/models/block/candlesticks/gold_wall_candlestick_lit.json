@@ -1,5 +1,5 @@
 {
-  "parent": "voidfurniture:block/candlesticks/base_candlestick_floor",
+  "parent": "voidfurniture:block/candlesticks/base_candlestick_wall",
   "textures": {
     "0": "minecraft:block/candle_lit",
     "2": "minecraft:block/gold_block",

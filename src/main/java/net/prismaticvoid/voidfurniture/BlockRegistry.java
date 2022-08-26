@@ -94,13 +94,19 @@ public class BlockRegistry {
                 (FairyLightBlock::new)
         );
 
-        registerBlockWithItem("candlesticks/gold_candlestick", new CandlestickBlock(
+        registerBlock("candlesticks/gold_candlestick", new CandlestickBlock(
                 FabricBlockSettings.of(Material.DECORATION)
-                        .breakInstantly()
                         .nonOpaque()
                         .luminance(createLightLevelFromLitBlockState(12)))
         );
 
+        registerBlock("candlesticks/gold_wall_candlestick", new CandlestickWallBlock(
+                FabricBlockSettings.of(Material.DECORATION)
+                        .nonOpaque()
+                        .luminance(createLightLevelFromLitBlockState(12)))
+        );
+
+        /*
         registerDyedBlock("candlesticks/base_gold_candlestick",
                 FabricBlockSettings.of(Material.DECORATION)
                         .breakInstantly()
@@ -123,6 +129,7 @@ public class BlockRegistry {
                         .luminance(createLightLevelFromLitBlockState(12)),
                 CandlestickBlock::new
         );
+        */
 
         registerWoodenBlock(
                 "benches/base_bench",
@@ -139,28 +146,51 @@ public class BlockRegistry {
         ));
     }
 
+    public static Block get(String name) {
+        return BLOCKS.get(name);
+    }
+
     private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
+        registerWoodenBlock(name, settings, factory, true);
+    }
+
+    private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory, boolean addItemToo) {
         String[] types = {"oak", "birch", "spruce", "jungle", "acacia", "dark_oak", "crimson", "warped"};
 
         for (String type : types) {
             var new_name = name.replace("base", type);
 
-            registerBlockWithItem(new_name, factory.apply(settings));
+            if (addItemToo) {
+                registerBlockWithItem(new_name, factory.apply(settings));
+            }
+            else {
+                registerBlock(new_name, factory.apply(settings));
+            }
         }
     }
 
     private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
+        registerDyedBlock(name, settings, factory, true);
+    }
+
+    private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory, boolean addItemToo) {
         String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
         for (int i = 0; i < types.length; i++) {
             var new_name = name.replace("base", types[i]);
 
-            registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
+            if (addItemToo) {
+                registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
+            }
+            else {
+                registerBlock(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
+            }
         }
     }
 
     private static <B extends Block> B registerBlockWithItem(String name, B block) {
         final B b = registerBlock(name, block);
+
         Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
         return b;
     }
