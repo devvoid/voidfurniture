@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -10,14 +10,15 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.prismaticvoid.voidfurniture.Utils;
 
-public class ShortTableCenterBlock extends Block {
-    public ShortTableCenterBlock(AbstractBlock.Settings settings) {
+public class TableCenterBlock extends Block {
+    public TableCenterBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return Utils.make_cuboid(0.0, 10.0, 0.0, 16, 2, 16);
+        return Utils.make_cuboid(0.0, 14.0, 0.0, 16, 2, 16);
     }
 }

@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -12,6 +12,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.prismaticvoid.voidfurniture.Utils;
 
 import java.util.Dictionary;
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class InkQuillBlock extends HorizontalFacingBlock {
         SHAPES.put(Direction.EAST, Utils.rotateShape(Direction.EAST, shape));
     }
 
-    protected InkQuillBlock(Settings settings) {
+    public InkQuillBlock(Settings settings) {
         super(settings);
         setDefaultState(this.stateManager.getDefaultState()
                 .with(Properties.HORIZONTAL_FACING, Direction.NORTH));

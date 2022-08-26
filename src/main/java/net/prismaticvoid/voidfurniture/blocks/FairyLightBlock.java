@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
@@ -12,6 +12,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.prismaticvoid.voidfurniture.Tags;
 
 public class FairyLightBlock extends HorizontalConnectingBlock {
     public FairyLightBlock(Settings settings) {

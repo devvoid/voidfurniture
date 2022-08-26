@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.*;
@@ -17,6 +17,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import net.prismaticvoid.voidfurniture.Utils;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;

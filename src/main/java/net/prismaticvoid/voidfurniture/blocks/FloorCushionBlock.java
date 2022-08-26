@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -8,6 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.prismaticvoid.voidfurniture.Utils;
 
 public class FloorCushionBlock extends Block {
     public FloorCushionBlock(AbstractBlock.Settings settings) {

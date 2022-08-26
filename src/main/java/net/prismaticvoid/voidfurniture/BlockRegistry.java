@@ -7,6 +7,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.Registry;
+import net.prismaticvoid.voidfurniture.blocks.*;
 
 import java.util.HashMap;
 import java.util.function.Function;

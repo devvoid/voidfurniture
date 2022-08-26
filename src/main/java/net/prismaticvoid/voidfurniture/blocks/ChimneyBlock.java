@@ -1,4 +1,4 @@
-package net.prismaticvoid.voidfurniture;
+package net.prismaticvoid.voidfurniture.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
