@@ -20,6 +20,12 @@ public class BlockRegistry {
                 .strength(2.0f, 3.0f)
                 .sounds(BlockSoundGroup.WOOD);
 
+        var candlestickBlockSettings = FabricBlockSettings.of(Material.METAL)
+            .strength(2.0f, 3.0f)
+            .nonOpaque()
+            .sounds(BlockSoundGroup.METAL)
+            .luminance(createLightLevelFromLitBlockState(12));
+
         registerWoodenBlock(
                 "chairs/base_chair",
                 woodBlockSettings.nonOpaque(),
@@ -94,42 +100,38 @@ public class BlockRegistry {
                 (FairyLightBlock::new)
         );
 
-        registerBlock("candlesticks/gold_candlestick", new CandlestickBlock(
-                FabricBlockSettings.of(Material.DECORATION)
-                        .nonOpaque()
-                        .luminance(createLightLevelFromLitBlockState(12)))
-        );
+        registerBlock("candlesticks/gold_candlestick", new CandlestickBlock(candlestickBlockSettings));
 
-        registerBlock("candlesticks/gold_wall_candlestick", new CandlestickWallBlock(
-                FabricBlockSettings.of(Material.DECORATION)
-                        .nonOpaque()
-                        .luminance(createLightLevelFromLitBlockState(12)))
-        );
+        registerBlock("candlesticks/gold_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
 
-        /*
+        registerBlock("candlesticks/iron_candlestick", new CandlestickBlock(candlestickBlockSettings));
+
+        registerBlock("candlesticks/iron_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
+
         registerDyedBlock("candlesticks/base_gold_candlestick",
-                FabricBlockSettings.of(Material.DECORATION)
-                        .breakInstantly()
-                        .nonOpaque()
-                        .luminance(createLightLevelFromLitBlockState(12)),
-                CandlestickBlock::new
+                candlestickBlockSettings,
+                CandlestickBlock::new,
+                false
         );
 
-        registerBlockWithItem("candlesticks/iron_candlestick", new CandlestickBlock(
-                FabricBlockSettings.of(Material.DECORATION)
-                        .breakInstantly()
-                        .nonOpaque()
-                        .luminance(createLightLevelFromLitBlockState(12)))
+        registerDyedBlock("candlesticks/base_gold_wall_candlestick",
+                candlestickBlockSettings,
+                CandlestickWallBlock::new,
+                false
         );
 
         registerDyedBlock("candlesticks/base_iron_candlestick",
-                FabricBlockSettings.of(Material.DECORATION)
-                        .breakInstantly()
-                        .nonOpaque()
-                        .luminance(createLightLevelFromLitBlockState(12)),
-                CandlestickBlock::new
+                candlestickBlockSettings,
+                CandlestickBlock::new,
+                false
         );
-        */
+
+        registerDyedBlock("candlesticks/base_iron_wall_candlestick",
+                candlestickBlockSettings,
+                CandlestickWallBlock::new,
+                false
+        );
+
 
         registerWoodenBlock(
                 "benches/base_bench",
@@ -190,7 +192,6 @@ public class BlockRegistry {
 
     private static <B extends Block> B registerBlockWithItem(String name, B block) {
         final B b = registerBlock(name, block);
-
         Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
         return b;
     }

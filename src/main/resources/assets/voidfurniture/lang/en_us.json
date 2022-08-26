@@ -60,6 +60,15 @@
   "block.voidfurniture.tables.short_crimson_table_edge": "Short Crimson Table Edge",
   "block.voidfurniture.tables.short_warped_table_edge": "Short Warped Table Edge",
 
+  "block.voidfurniture.benches.oak_bench": "Oak Bench",
+  "block.voidfurniture.benches.birch_bench": "Birch Bench",
+  "block.voidfurniture.benches.spruce_bench": "Spruce Bench",
+  "block.voidfurniture.benches.jungle_bench": "Jungle Bench",
+  "block.voidfurniture.benches.acacia_bench": "Acacia Bench",
+  "block.voidfurniture.benches.dark_oak_bench": "Dark Oak Bench",
+  "block.voidfurniture.benches.crimson_bench": "Crimson Bench",
+  "block.voidfurniture.benches.warped_bench": "Warped Bench",
+
   "block.voidfurniture.plant_pots.plant_pot": "Plant Pot",
   "block.voidfurniture.plant_pots.white_plant_pot": "White Plant Pot",
   "block.voidfurniture.plant_pots.orange_plant_pot": "Orange Plant Pot",
@@ -165,6 +174,8 @@
   "block.voidfurniture.candlesticks.green_iron_candlestick": "Iron Candlestick (Green)",
   "block.voidfurniture.candlesticks.red_iron_candlestick": "Iron Candlestick (Red)",
   "block.voidfurniture.candlesticks.black_iron_candlestick": "Iron Candlestick (Black)",
+
+  "block.voidfurniture.chimneys.brick_chimney": "Brick Chimney",
 
   "block.voidfurniture.ink_quill": "Ink Quill"
 }

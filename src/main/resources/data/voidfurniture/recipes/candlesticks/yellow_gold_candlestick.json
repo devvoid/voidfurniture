@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:candlesticks",
+  "pattern": [
+    "xyx",
+    " x ",
+    " x "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:gold_nugget"
+    },
+    "y": {
+      "item": "minecraft:yellow_candle"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:candlesticks/yellow_gold_candlestick",
+    "count": 1
+  }
+}

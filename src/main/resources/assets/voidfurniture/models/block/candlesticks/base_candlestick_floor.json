@@ -81,5 +81,11 @@
 				"down": {"uv": [2, 2, 6, 6], "texture": "#2"}
 			}
 		}
-	]
+	],
+	"display": {
+		"gui": {
+			"rotation": [30, -135, 0],
+			"translation": [0, 1, 0]
+		}
+	}
 }

@@ -14,6 +14,7 @@ public class VoidFurnitureMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Loading began");
 		BlockRegistry.init();
+		ItemRegistry.init();
 
 		LOGGER.info("[voidfurniture] Loading complete");
 	}

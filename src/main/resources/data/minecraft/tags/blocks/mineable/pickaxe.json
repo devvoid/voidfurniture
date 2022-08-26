@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#voidfurniture:plant_pots"
+    "#voidfurniture:plant_pots",
+    "#voidfurniture:candlesticks"
   ]
 }
