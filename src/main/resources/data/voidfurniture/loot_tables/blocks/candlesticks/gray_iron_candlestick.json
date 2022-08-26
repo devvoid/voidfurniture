@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "voidfurniture:candlesticks/gray_gold_candlestick"
+          "name": "voidfurniture:candlesticks/gray_iron_candlestick"
         }
       ],
       "conditions": [
