@@ -3,6 +3,8 @@
   "values": [
     "#voidfurniture:plant_pots",
     "#voidfurniture:candlesticks",
-    "#voidfurniture:chimneys"
+    "#voidfurniture:chimneys",
+    "voidfurniture:collections/teatime/teapot",
+    "voidfurniture:collections/teatime/teacup"
   ]
 }

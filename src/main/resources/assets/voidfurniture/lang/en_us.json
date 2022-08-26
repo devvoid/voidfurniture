@@ -177,5 +177,17 @@
 
   "block.voidfurniture.chimneys.brick_chimney": "Brick Chimney",
 
-  "block.voidfurniture.ink_quill": "Ink Quill"
+  "block.voidfurniture.ink_quill": "Ink Quill",
+
+  "block.voidfurniture.stools.oak_stool": "Oak Stool",
+  "block.voidfurniture.stools.birch_stool": "Birch Stool",
+  "block.voidfurniture.stools.spruce_stool": "Spruce Stool",
+  "block.voidfurniture.stools.jungle_stool": "Jungle Stool",
+  "block.voidfurniture.stools.acacia_stool": "Acacia Stool",
+  "block.voidfurniture.stools.dark_oak_stool": "Dark Oak Stool",
+  "block.voidfurniture.stools.crimson_stool": "Crimson Stool",
+  "block.voidfurniture.stools.warped_stool": "Warped Stool",
+
+  "block.voidfurniture.collections.teatime.teapot": "Teapot",
+  "block.voidfurniture.collections.teatime.teacup": "Teacup"
 }

@@ -73,13 +73,13 @@ public class BlockRegistry {
 
         registerDyedBlock(
                 "plant_pots/base_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F),
+                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F).requiresTool(),
                 Block::new
         );
 
         registerDyedBlock(
                 "plant_pots/base_glazed_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F),
+                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F, 4.2F).requiresTool(),
                 Block::new
         );
 
@@ -146,6 +146,16 @@ public class BlockRegistry {
 
         registerBlockWithItem("ink_quill", new InkQuillBlock(
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
+        ));
+
+        registerWoodenBlock("stools/base_stool", woodBlockSettings, StoolBlock::new);
+
+        registerBlockWithItem("collections/teatime/teapot", new TeapotBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
+        ));
+
+        registerBlockWithItem("collections/teatime/teacup", new TeacupBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
     }
 

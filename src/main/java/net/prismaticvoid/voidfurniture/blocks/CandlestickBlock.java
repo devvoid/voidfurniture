@@ -74,7 +74,7 @@ public class CandlestickBlock extends AbstractCandleBlock {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return TorchBlock.sideCoversSmallSquare(world, pos.down(), Direction.UP);
+        return sideCoversSmallSquare(world, pos.down(), Direction.UP);
     }
 
     @Override
