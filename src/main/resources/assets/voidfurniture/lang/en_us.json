@@ -164,5 +164,7 @@
   "block.voidfurniture.candlesticks.brown_iron_candlestick": "Iron Candlestick (Brown)",
   "block.voidfurniture.candlesticks.green_iron_candlestick": "Iron Candlestick (Green)",
   "block.voidfurniture.candlesticks.red_iron_candlestick": "Iron Candlestick (Red)",
-  "block.voidfurniture.candlesticks.black_iron_candlestick": "Iron Candlestick (Black)"
+  "block.voidfurniture.candlesticks.black_iron_candlestick": "Iron Candlestick (Black)",
+
+  "block.voidfurniture.ink_quill": "Ink Quill"
 }

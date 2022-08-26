@@ -35,7 +35,10 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
                 BlockRegistry.BLOCKS.get("fairy_lights/red_fairy_light"),
                 BlockRegistry.BLOCKS.get("fairy_lights/black_fairy_light")
         );
-        //BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
-        //BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
+
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.BLOCKS.get("ink_quill"), RenderLayer.getCutout());
+
+        // BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.OAK_CAMPFIRE, RenderLayer.getCutout());
+        // BlockEntityRendererRegistry.register(BlockRegistry.CAMPFIRE_BLOCK_ENTITY, CampfireBlockEntityRenderer::new);
     }
 }

@@ -1,5 +1,6 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
 		"0": "voidfurniture:block/book_stack",
 		"particle": "voidfurniture:block/book_stack"
@@ -43,28 +44,13 @@
 		}
 	],
 	"display": {
-		"thirdperson_righthand": {
-			"translation": [0, 8, 0]
-		},
-		"thirdperson_lefthand": {
-			"translation": [0, 8, 0]
-		},
-		"firstperson_righthand": {
-			"translation": [0, 5, 0]
-		},
-		"firstperson_lefthand": {
-			"translation": [0, 5, 0]
-		},
 		"ground": {
-			"translation": [0, 4, 0]
+			"translation": [0, 3, 0],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
-			"rotation": [25, 135, 0],
-			"translation": [0, 3.5, 0],
-			"scale": [1.2, 1.2, 1.2]
-		},
-		"head": {
-			"translation": [0, 14.5, 0]
+			"rotation": [30, -135, 0],
+			"translation": [0, 4, 0]
 		}
 	}
 }

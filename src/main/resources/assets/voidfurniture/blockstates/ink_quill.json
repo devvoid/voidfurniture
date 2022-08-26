@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "voidfurniture:block/ink_quill", "uvlock": false },
+    "facing=east":  { "model": "voidfurniture:block/ink_quill", "y":  90, "uvlock": false },
+    "facing=south": { "model": "voidfurniture:block/ink_quill", "y": 180, "uvlock": false },
+    "facing=west":  { "model": "voidfurniture:block/ink_quill", "y": 270, "uvlock": false }
+  }
+}

@@ -133,6 +133,10 @@ public class BlockRegistry {
         registerBlockWithItem("chimneys/brick_chimney", new ChimneyBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.RED).strength(2.0f, 6.0f).requiresTool()
         ));
+
+        registerBlockWithItem("ink_quill", new InkQuillBlock(
+                FabricBlockSettings.of(Material.DECORATION).breakInstantly()
+        ));
     }
 
     private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
