@@ -189,5 +189,8 @@
   "block.voidfurniture.stools.warped_stool": "Warped Stool",
 
   "block.voidfurniture.collections.teatime.teapot": "Teapot",
-  "block.voidfurniture.collections.teatime.teacup": "Teacup"
+  "block.voidfurniture.collections.teatime.teacup": "Teacup",
+  "block.voidfurniture.collections.teatime.plate_empty": "Plate (Empty)",
+  "block.voidfurniture.collections.teatime.plate_cookies": "Plate (Cookies)",
+  "block.voidfurniture.collections.teatime.plate_sandwich": "Plate (Sandwich)"
 }

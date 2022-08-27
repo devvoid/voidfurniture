@@ -168,6 +168,10 @@ public class BlockRegistry {
         registerBlockWithItem("collections/teatime/plate_cookies", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
+
+        registerBlockWithItem("collections/teatime/plate_sandwich", new PlateBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
+        ));
     }
 
     public static Block get(String name) {
