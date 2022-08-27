@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:tables",
+  "pattern": [
+    "   ",
+    "x x",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:clay_ball"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:teatime/teacup",
+    "count": 4
+  }
+}

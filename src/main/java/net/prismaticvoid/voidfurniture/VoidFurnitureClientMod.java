@@ -37,7 +37,7 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
         );
 
         addBlockToCutout("ink_quill");
-        addBlockToCutout("collections/teatime/plate_cookies");
+        addBlockToCutout("teatime/plate_cookies");
     }
 
     public static void addBlockToCutout(String name) {

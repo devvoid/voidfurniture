@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/tables/base_short_table_corner",
-  "textures": {
-    "0": "minecraft:block/acacia_planks",
-    "particle": "minecraft:block/acacia_planks"
-  }
-}

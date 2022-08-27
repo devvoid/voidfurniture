@@ -8,9 +8,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.Registry;
 import net.prismaticvoid.voidfurniture.blocks.*;
-import net.prismaticvoid.voidfurniture.blocks.collections.PlateBlock;
-import net.prismaticvoid.voidfurniture.blocks.collections.TeacupBlock;
-import net.prismaticvoid.voidfurniture.blocks.collections.TeapotBlock;
+import net.prismaticvoid.voidfurniture.blocks.PlateBlock;
+import net.prismaticvoid.voidfurniture.blocks.TeacupBlock;
+import net.prismaticvoid.voidfurniture.blocks.TeapotBlock;
 
 import java.util.HashMap;
 import java.util.function.Function;
@@ -54,25 +54,9 @@ public class BlockRegistry {
                 TableEdgeBlock::new
         );
 
-        registerWoodenBlock(
-                "tables/short_base_table_center",
-                woodBlockSettings.nonOpaque(),
-                ShortTableCenterBlock::new
-        );
-
-        registerWoodenBlock(
-                "tables/short_base_table_corner",
-                woodBlockSettings.nonOpaque(),
-                ShortTableCornerBlock::new
-        );
-
-        registerWoodenBlock(
-                "tables/short_base_table_edge",
-                woodBlockSettings.nonOpaque(),
-                ShortTableEdgeBlock::new
-        );
-
-        registerBlockWithItem("plant_pots/plant_pot", new Block(FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)));
+        registerBlockWithItem("plant_pots/plant_pot", new Block(
+                FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)
+        ));
 
         registerDyedBlock(
                 "plant_pots/base_plant_pot",
@@ -153,23 +137,23 @@ public class BlockRegistry {
 
         registerWoodenBlock("stools/base_stool", woodBlockSettings, StoolBlock::new);
 
-        registerBlockWithItem("collections/teatime/teapot", new TeapotBlock(
+        registerBlockWithItem("teatime/teapot", new TeapotBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("collections/teatime/teacup", new TeacupBlock(
+        registerBlockWithItem("teatime/teacup", new TeacupBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("collections/teatime/plate_empty", new PlateBlock(
+        registerBlockWithItem("teatime/plate_empty", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("collections/teatime/plate_cookies", new PlateBlock(
+        registerBlockWithItem("teatime/plate_cookies", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("collections/teatime/plate_sandwich", new PlateBlock(
+        registerBlockWithItem("teatime/plate_sandwich", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
     }
