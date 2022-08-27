@@ -21,9 +21,31 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.prismaticvoid.voidfurniture.Utils;
 
+import java.util.HashMap;
+
 public class BookStackBlock extends HorizontalFacingBlock {
     public static final BooleanProperty TIDY = BooleanProperty.of("tidy");
     public static final IntProperty BOOKS = IntProperty.of("books", 1, 3);
+
+    // We only need one shape for one book since it's the same either way
+    private static final HashMap<Direction, VoxelShape> SHAPE_ONEBOOK;
+    private static final HashMap<Direction, VoxelShape> SHAPE_TWOBOOKS;
+    private static final HashMap<Direction, VoxelShape> SHAPE_TWOBOOKS_TIDY;
+    private static final HashMap<Direction, VoxelShape> SHAPE_THREEBOOKS;
+    private static final HashMap<Direction, VoxelShape> SHAPE_THREEBOOKS_TIDY;
+
+    static {
+        var s1 = VoxelShapes.cuboid(0.3125, 0, 0.25, 0.6875, 0.125, 0.75);
+        var s2 =VoxelShapes.cuboid(0.375, 0.125, 0.3125, 0.75, 0.25, 0.8125);
+        var s3 = VoxelShapes.cuboid(0.3125, 0.25, 0.1875, 0.6875, 0.375, 0.6875);
+
+        SHAPE_ONEBOOK = Utils.createRotatedShapes(s1);
+        SHAPE_TWOBOOKS = Utils.createRotatedShapes(VoxelShapes.union(s1, s2));
+        SHAPE_THREEBOOKS = Utils.createRotatedShapes(VoxelShapes.union(s1, s2, s3));
+
+        SHAPE_TWOBOOKS_TIDY = Utils.createRotatedShapes(VoxelShapes.cuboid(0.3125, 0, 0.25, 0.6875, 0.25, 0.75));
+        SHAPE_THREEBOOKS_TIDY = Utils.createRotatedShapes(VoxelShapes.cuboid(0.3125, 0, 0.25, 0.6875, 0.375, 0.75));
+    }
 
     public BookStackBlock(Settings settings) {
         super(settings);
@@ -48,13 +70,28 @@ public class BookStackBlock extends HorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        /*
-        // This is correct for when it's facing north. I can't be bothered to
-        // jury-rig a system to handle all 12 possible combinations right now...
-        var book1 = Utils.make_cuboid(5, 0, 4, 6, 2, 8);
-        var book2 = Utils.make_cuboid(6, 2, 5, 6, 2, 8);
-        var book3 = Utils.make_cuboid(5, 4, 3, 6, 2, 8);
-        */
+        var tidy = state.get(TIDY);
+        var num = state.get(BOOKS);
+        var dir = state.get(Properties.HORIZONTAL_FACING);
+
+        switch (num) {
+            case 1:
+                return SHAPE_ONEBOOK.get(dir);
+            case 2:
+                if (tidy) {
+                    return SHAPE_TWOBOOKS_TIDY.get(dir);
+                }
+                else {
+                    return SHAPE_TWOBOOKS.get(dir);
+                }
+            case 3:
+                if (tidy) {
+                    return SHAPE_THREEBOOKS_TIDY.get(dir);
+                }
+                else {
+                    return SHAPE_THREEBOOKS.get(dir);
+                }
+        }
 
         return Utils.make_cuboid(4, 0, 4, 6,  2 * state.get(BOOKS), 6);
     }
