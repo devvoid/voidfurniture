@@ -156,6 +156,10 @@ public class BlockRegistry {
         registerBlockWithItem("teatime/plate_sandwich", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
+
+        registerBlockWithItem("misc/trunk", new TrunkBlock(
+                woodBlockSettings
+        ));
     }
 
     public static Block get(String name) {

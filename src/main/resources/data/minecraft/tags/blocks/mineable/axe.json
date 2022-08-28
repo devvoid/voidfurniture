@@ -4,6 +4,7 @@
     "#voidfurniture:chairs",
     "#voidfurniture:tables",
     "#voidfurniture:benches",
-    "#voidfurniture:stools"
+    "#voidfurniture:stools",
+    "voidfurniture:misc/trunk"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:tables",
+  "pattern": [
+    "yxy",
+    "x x",
+    "yxy"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:leather"
+    },
+    "y": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:misc/trunk",
+    "count": 1
+  }
+}

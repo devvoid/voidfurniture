@@ -167,5 +167,7 @@
   "block.voidfurniture.teatime.teacup": "Teacup",
   "block.voidfurniture.teatime.plate_empty": "Plate (Empty)",
   "block.voidfurniture.teatime.plate_cookies": "Plate (Cookies)",
-  "block.voidfurniture.teatime.plate_sandwich": "Plate (Sandwich)"
+  "block.voidfurniture.teatime.plate_sandwich": "Plate (Sandwich)",
+
+  "block.voidfurniture.misc.trunk": "Trunk"
 }
