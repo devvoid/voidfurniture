@@ -6,7 +6,7 @@
 		"3": "voidfurniture:block/misc/trunk_sides",
 		"4": "voidfurniture:block/misc/trunk_back",
 		"5": "voidfurniture:block/misc/trunk_topnbottom",
-		"6": "voidfurniture:block/lock",
+		"6": "voidfurniture:block/misc/lock",
 		"particle": "voidfurniture:block/misc/trunk_particle"
 	},
 	"elements": [
