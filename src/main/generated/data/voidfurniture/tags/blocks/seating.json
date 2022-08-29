@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#voidfurniture:benches",
+    "#voidfurniture:chairs",
+    "#voidfurniture:stools",
+    "#voidfurniture:floor_cushions"
+  ]
+}

@@ -206,7 +206,8 @@ public class BlockRegistry {
 
     private static <B extends Block> B registerBlockWithItem(String name, B block) {
         final B b = registerBlock(name, block);
-        Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
+        var i = Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
+        ItemRegistry.ITEMS.put(name, i);
         return b;
     }
 

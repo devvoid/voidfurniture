@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "voidfurniture:seating/benches/oak_bench",
     "voidfurniture:seating/benches/birch_bench",
     "voidfurniture:seating/benches/spruce_bench",
     "voidfurniture:seating/benches/jungle_bench",
-    "voidfurniture:seating/benches/acacia_bench",
     "voidfurniture:seating/benches/dark_oak_bench",
     "voidfurniture:seating/benches/crimson_bench",
-    "voidfurniture:seating/benches/warped_bench"
+    "voidfurniture:seating/benches/warped_bench",
+    "voidfurniture:seating/benches/oak_bench",
+    "voidfurniture:seating/benches/acacia_bench"
   ]
 }

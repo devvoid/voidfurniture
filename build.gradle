@@ -70,9 +70,6 @@ loom {
 	}
 }
 
-// We should run datagen whenever we build.
-processResources.dependsOn runDatagenClient
-
 // Add the datagenned files into the jar.
 sourceSets {
 	main {
