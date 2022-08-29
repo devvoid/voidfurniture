@@ -31,7 +31,7 @@ public class BlockRegistry {
             .luminance(createLightLevelFromLitBlockState(12));
 
         registerWoodenBlock(
-                "chairs/base_chair",
+                "seating/chairs/base_chair",
                 woodBlockSettings.nonOpaque(),
                 ChairBlock::new
         );
@@ -71,7 +71,7 @@ public class BlockRegistry {
         );
 
         registerDyedBlock(
-                "floor_cushions/base_floor_cushion",
+                "seating/floor_cushions/base_floor_cushion",
                 FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
                 (FloorCushionBlock::new)
         );
@@ -122,7 +122,7 @@ public class BlockRegistry {
 
 
         registerWoodenBlock(
-                "benches/base_bench",
+                "seating/benches/base_bench",
                 woodBlockSettings.nonOpaque(),
                 BenchBlock::new
         );
@@ -135,7 +135,7 @@ public class BlockRegistry {
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
         ));
 
-        registerWoodenBlock("stools/base_stool", woodBlockSettings, StoolBlock::new);
+        registerWoodenBlock("seating/stools/base_stool", woodBlockSettings, StoolBlock::new);
 
         registerBlockWithItem("teatime/teapot", new TeapotBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)

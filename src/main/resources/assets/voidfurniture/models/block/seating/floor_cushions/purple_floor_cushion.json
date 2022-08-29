@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/seating/floor_cushions/base_floor_cushion",
+  "textures": {
+    "0": "minecraft:block/purple_wool",
+    "particle": "minecraft:block/purple_wool"
+  }
+}

@@ -1,10 +1,10 @@
 {
   "replace": "false",
   "values": [
-    "#voidfurniture:chairs",
+    "#voidfurniture:seating/chairs",
+    "#voidfurniture:seating/benches",
+    "#voidfurniture:seating/stools",
     "#voidfurniture:tables",
-    "#voidfurniture:benches",
-    "#voidfurniture:stools",
     "voidfurniture:misc/trunk"
   ]
 }

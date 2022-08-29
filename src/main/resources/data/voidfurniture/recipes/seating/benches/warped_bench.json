@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:seating/benches",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "x x"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:warped_planks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:seating/benches/warped_bench",
+    "count": 2
+  }
+}

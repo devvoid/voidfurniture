@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "voidfurniture:floor_cushions",
+  "ingredients": [
+	{
+		"item": "minecraft:green_dye"
+	},
+	{
+		"tag": "voidfurniture:floor_cushions"
+	}
+  ],
+  "result": {
+    "item": "voidfurniture:seating/floor_cushions/green_floor_cushion",
+    "count": 1
+  }
+}

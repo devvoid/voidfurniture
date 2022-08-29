@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:floor_cushions",
+  "pattern": [
+    "   ",
+    "xx ",
+    "xx "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:green_wool"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:seating/floor_cushions/green_floor_cushion",
+    "count": 4
+  }
+}
