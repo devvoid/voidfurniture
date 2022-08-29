@@ -10,7 +10,8 @@ import net.prismaticvoid.voidfurniture.Utils;
 
 public class TagGenerator extends FabricTagProvider.BlockTagProvider {
     private static final TagKey<Block> BENCHES_TAG  = TagKey.of(Registry.BLOCK_KEY, Utils.id("benches"));
-    protected TagGenerator(FabricDataGenerator dataGenerator) {
+
+    public TagGenerator(FabricDataGenerator dataGenerator) {
         super(dataGenerator);
     }
 
