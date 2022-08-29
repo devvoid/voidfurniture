@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.prismaticvoid.voidfurniture.VoidFurnitureClientMod"
+    ],
+    "fabric-datagen": [
+      "net.prismaticvoid.voidfurniture.datagen.VoidFurnitureDatagen"
     ]
   },
   "mixins": [
