@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.prismaticvoid.voidfurniture.BlockRegistry;
 
 public class ModelGenerator extends FabricModelProvider {
     public ModelGenerator(FabricDataGenerator dataGenerator) {
@@ -17,5 +18,6 @@ public class ModelGenerator extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
     }
 }
