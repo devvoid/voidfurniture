@@ -1,6 +1,0 @@
-{
-  "parent": "voidfurniture:block/seating/stools/base_stool",
-  "textures": {
-    "0": "minecraft:block/acacia_planks"
-  }
-}

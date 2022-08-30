@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/seating/benches/base_bench_none",
-  "textures": {
-    "0": "block/birch_planks",
-	"particles": "block/birch_planks"
-  }
-}

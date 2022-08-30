@@ -1,0 +1,6 @@
+{
+  "parent": "voidfurniture:block/iron_wall_candlestick_lit",
+  "textures": {
+    "0": "minecraft:block/black_candle_lit"
+  }
+}

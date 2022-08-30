@@ -1,0 +1,6 @@
+{
+  "parent": "voidfurniture:block/base_fairy_light_hanging",
+  "textures": {
+    "0": "voidfurniture:block/light_blue_fairy_light_hanging"
+  }
+}

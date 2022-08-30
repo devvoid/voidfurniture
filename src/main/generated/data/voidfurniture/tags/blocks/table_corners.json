@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "voidfurniture:tables/birch_table_corner",
-    "voidfurniture:tables/acacia_table_corner",
-    "voidfurniture:tables/spruce_table_corner",
-    "voidfurniture:tables/crimson_table_corner",
-    "voidfurniture:tables/oak_table_corner",
-    "voidfurniture:tables/warped_table_corner",
-    "voidfurniture:tables/jungle_table_corner",
-    "voidfurniture:tables/dark_oak_table_corner"
+    "voidfurniture:spruce_table_corner",
+    "voidfurniture:dark_oak_table_corner",
+    "voidfurniture:jungle_table_corner",
+    "voidfurniture:acacia_table_corner",
+    "voidfurniture:warped_table_corner",
+    "voidfurniture:crimson_table_corner",
+    "voidfurniture:birch_table_corner",
+    "voidfurniture:oak_table_corner"
   ]
 }

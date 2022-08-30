@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/chimneys/base_chimney",
-  "textures": {
-    "0": "minecraft:block/bricks",
-    "particle": "minecraft:block/bricks"
-  }
-}

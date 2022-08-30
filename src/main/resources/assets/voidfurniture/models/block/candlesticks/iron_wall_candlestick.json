@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/candlesticks/base_candlestick_wall",
-  "textures": {
-    "2": "minecraft:block/iron_block",
-    "particle": "minecraft:block/iron_block"
-  }
-}

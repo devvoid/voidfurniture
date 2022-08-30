@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "voidfurniture:seating/chairs/dark_oak_chair",
-    "voidfurniture:seating/chairs/warped_chair",
-    "voidfurniture:seating/chairs/jungle_chair",
-    "voidfurniture:seating/chairs/oak_chair",
-    "voidfurniture:seating/chairs/acacia_chair",
-    "voidfurniture:seating/chairs/spruce_chair",
-    "voidfurniture:seating/chairs/crimson_chair",
-    "voidfurniture:seating/chairs/birch_chair"
+    "voidfurniture:oak_chair",
+    "voidfurniture:dark_oak_chair",
+    "voidfurniture:jungle_chair",
+    "voidfurniture:crimson_chair",
+    "voidfurniture:spruce_chair",
+    "voidfurniture:acacia_chair",
+    "voidfurniture:warped_chair",
+    "voidfurniture:birch_chair"
   ]
 }

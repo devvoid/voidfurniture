@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "voidfurniture:seating/stools/oak_stool",
-    "voidfurniture:seating/stools/acacia_stool",
-    "voidfurniture:seating/stools/jungle_stool",
-    "voidfurniture:seating/stools/birch_stool",
-    "voidfurniture:seating/stools/spruce_stool",
-    "voidfurniture:seating/stools/dark_oak_stool",
-    "voidfurniture:seating/stools/crimson_stool",
-    "voidfurniture:seating/stools/warped_stool"
+    "voidfurniture:dark_oak_stool",
+    "voidfurniture:acacia_stool",
+    "voidfurniture:jungle_stool",
+    "voidfurniture:warped_stool",
+    "voidfurniture:oak_stool",
+    "voidfurniture:birch_stool",
+    "voidfurniture:spruce_stool",
+    "voidfurniture:crimson_stool"
   ]
 }

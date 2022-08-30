@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "voidfurniture:block/teatime/teacup", "uvlock": true },
-    "facing=east":  { "model": "voidfurniture:block/teatime/teacup", "y":  90, "uvlock": true },
-    "facing=south": { "model": "voidfurniture:block/teatime/teacup", "y": 180, "uvlock": true },
-    "facing=west":  { "model": "voidfurniture:block/teatime/teacup", "y": 270, "uvlock": true }
-  }
-}

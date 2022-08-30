@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/seating/benches/base_bench_right",
-  "textures": {
-    "0": "block/acacia_planks",
-	"particles": "block/acacia_planks"
-  }
-}

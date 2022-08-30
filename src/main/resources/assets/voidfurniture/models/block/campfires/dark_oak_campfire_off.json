@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/campfires/base_campfire_off",
-  "textures": {
-    "1": "voidfurniture:block/campfires/dark_oak_campfire_cap",
-    "2": "voidfurniture:block/campfires/dark_oak_campfire_log"
-  }
-}

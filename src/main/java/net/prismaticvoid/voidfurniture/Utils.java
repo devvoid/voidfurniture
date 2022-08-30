@@ -13,8 +13,8 @@ import java.util.HashMap;
 
 public class Utils {
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(
-            new Identifier("voidfurniture", "general"),
-            () -> new ItemStack(BlockRegistry.BLOCKS.get("chairs/oak_chair"))
+            Utils.id("general"),
+            () -> new ItemStack(BlockRegistry.BLOCKS.get("oak_chair"))
     );
 
     public static Identifier id(String name) {

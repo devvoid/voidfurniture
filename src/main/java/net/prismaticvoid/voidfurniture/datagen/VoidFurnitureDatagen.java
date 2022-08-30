@@ -9,6 +9,6 @@ public class VoidFurnitureDatagen implements DataGeneratorEntrypoint {
         fabricDataGenerator.addProvider(BlockTagGenerator::new);
         fabricDataGenerator.addProvider(ItemTagGenerator::new);
         fabricDataGenerator.addProvider(BlockLootTableGenerator::new);
-        fabricDataGenerator.addProvider(ModelGenerator::new);
+        //fabricDataGenerator.addProvider(ModelGenerator::new);
     }
 }

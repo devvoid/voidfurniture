@@ -1,0 +1,6 @@
+{
+  "parent": "voidfurniture:block/base_stool",
+  "textures": {
+    "0": "minecraft:block/birch_planks"
+  }
+}

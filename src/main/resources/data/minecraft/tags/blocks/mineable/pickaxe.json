@@ -4,7 +4,7 @@
     "#voidfurniture:plant_pots",
     "#voidfurniture:candlesticks",
     "#voidfurniture:chimneys",
-    "voidfurniture:teatime/teapot",
-    "voidfurniture:teatime/teacup"
+    "voidfurniture:teapot",
+    "voidfurniture:teacup"
   ]
 }

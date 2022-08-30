@@ -11,11 +11,11 @@
       "item": "minecraft:clay_ball"
     },
     "y": {
-      "item": "voidfurniture:teatime/teacup"
+      "item": "voidfurniture:teacup"
     }
   },
   "result": {
-    "item": "voidfurniture:teatime/teapot",
+    "item": "voidfurniture:teapot",
     "count": 4
   }
 }

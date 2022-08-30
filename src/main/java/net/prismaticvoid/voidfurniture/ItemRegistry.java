@@ -15,175 +15,175 @@ public class ItemRegistry {
     public static final HashMap<String, Item> ITEMS = new HashMap<>();
 
     public static void init() {
-        register("candlesticks/gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/gold_candlestick"),
-                BlockRegistry.get("candlesticks/gold_wall_candlestick"),
+        register("gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("gold_candlestick"),
+                BlockRegistry.get("gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/white_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/white_gold_candlestick"),
-                BlockRegistry.get("candlesticks/white_gold_wall_candlestick"),
+        register("white_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("white_gold_candlestick"),
+                BlockRegistry.get("white_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/orange_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/orange_gold_candlestick"),
-                BlockRegistry.get("candlesticks/orange_gold_wall_candlestick"),
+        register("orange_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("orange_gold_candlestick"),
+                BlockRegistry.get("orange_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/magenta_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/magenta_gold_candlestick"),
-                BlockRegistry.get("candlesticks/magenta_gold_wall_candlestick"),
+        register("magenta_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("magenta_gold_candlestick"),
+                BlockRegistry.get("magenta_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/light_blue_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/light_blue_gold_candlestick"),
-                BlockRegistry.get("candlesticks/light_blue_gold_wall_candlestick"),
+        register("light_blue_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("light_blue_gold_candlestick"),
+                BlockRegistry.get("light_blue_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/yellow_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/yellow_gold_candlestick"),
-                BlockRegistry.get("candlesticks/yellow_gold_wall_candlestick"),
+        register("yellow_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("yellow_gold_candlestick"),
+                BlockRegistry.get("yellow_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/lime_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/lime_gold_candlestick"),
-                BlockRegistry.get("candlesticks/lime_gold_wall_candlestick"),
+        register("lime_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("lime_gold_candlestick"),
+                BlockRegistry.get("lime_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/pink_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/pink_gold_candlestick"),
-                BlockRegistry.get("candlesticks/pink_gold_wall_candlestick"),
+        register("pink_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("pink_gold_candlestick"),
+                BlockRegistry.get("pink_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/gray_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/gray_gold_candlestick"),
-                BlockRegistry.get("candlesticks/gray_gold_wall_candlestick"),
+        register("gray_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("gray_gold_candlestick"),
+                BlockRegistry.get("gray_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/light_gray_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/light_gray_gold_candlestick"),
-                BlockRegistry.get("candlesticks/light_gray_gold_wall_candlestick"),
+        register("light_gray_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("light_gray_gold_candlestick"),
+                BlockRegistry.get("light_gray_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/cyan_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/cyan_gold_candlestick"),
-                BlockRegistry.get("candlesticks/cyan_gold_wall_candlestick"),
+        register("cyan_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("cyan_gold_candlestick"),
+                BlockRegistry.get("cyan_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/purple_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/purple_gold_candlestick"),
-                BlockRegistry.get("candlesticks/purple_gold_wall_candlestick"),
+        register("purple_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("purple_gold_candlestick"),
+                BlockRegistry.get("purple_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/blue_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/blue_gold_candlestick"),
-                BlockRegistry.get("candlesticks/blue_gold_wall_candlestick"),
+        register("blue_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("blue_gold_candlestick"),
+                BlockRegistry.get("blue_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/brown_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/brown_gold_candlestick"),
-                BlockRegistry.get("candlesticks/brown_gold_wall_candlestick"),
+        register("brown_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("brown_gold_candlestick"),
+                BlockRegistry.get("brown_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/green_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/green_gold_candlestick"),
-                BlockRegistry.get("candlesticks/green_gold_wall_candlestick"),
+        register("green_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("green_gold_candlestick"),
+                BlockRegistry.get("green_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/red_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/red_gold_candlestick"),
-                BlockRegistry.get("candlesticks/red_gold_wall_candlestick"),
+        register("red_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("red_gold_candlestick"),
+                BlockRegistry.get("red_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/black_gold_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/black_gold_candlestick"),
-                BlockRegistry.get("candlesticks/black_gold_wall_candlestick"),
+        register("black_gold_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("black_gold_candlestick"),
+                BlockRegistry.get("black_gold_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
 
-        register("candlesticks/iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/iron_candlestick"),
-                BlockRegistry.get("candlesticks/iron_wall_candlestick"),
+        register("iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("iron_candlestick"),
+                BlockRegistry.get("iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/white_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/white_iron_candlestick"),
-                BlockRegistry.get("candlesticks/white_iron_wall_candlestick"),
+        register("white_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("white_iron_candlestick"),
+                BlockRegistry.get("white_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/orange_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/orange_iron_candlestick"),
-                BlockRegistry.get("candlesticks/orange_iron_wall_candlestick"),
+        register("orange_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("orange_iron_candlestick"),
+                BlockRegistry.get("orange_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/magenta_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/magenta_iron_candlestick"),
-                BlockRegistry.get("candlesticks/magenta_iron_wall_candlestick"),
+        register("magenta_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("magenta_iron_candlestick"),
+                BlockRegistry.get("magenta_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/light_blue_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/light_blue_iron_candlestick"),
-                BlockRegistry.get("candlesticks/light_blue_iron_wall_candlestick"),
+        register("light_blue_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("light_blue_iron_candlestick"),
+                BlockRegistry.get("light_blue_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/yellow_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/yellow_iron_candlestick"),
-                BlockRegistry.get("candlesticks/yellow_iron_wall_candlestick"),
+        register("yellow_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("yellow_iron_candlestick"),
+                BlockRegistry.get("yellow_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/lime_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/lime_iron_candlestick"),
-                BlockRegistry.get("candlesticks/lime_iron_wall_candlestick"),
+        register("lime_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("lime_iron_candlestick"),
+                BlockRegistry.get("lime_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/pink_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/pink_iron_candlestick"),
-                BlockRegistry.get("candlesticks/pink_iron_wall_candlestick"),
+        register("pink_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("pink_iron_candlestick"),
+                BlockRegistry.get("pink_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/gray_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/gray_iron_candlestick"),
-                BlockRegistry.get("candlesticks/gray_iron_wall_candlestick"),
+        register("gray_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("gray_iron_candlestick"),
+                BlockRegistry.get("gray_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/light_gray_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/light_gray_iron_candlestick"),
-                BlockRegistry.get("candlesticks/light_gray_iron_wall_candlestick"),
+        register("light_gray_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("light_gray_iron_candlestick"),
+                BlockRegistry.get("light_gray_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/cyan_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/cyan_iron_candlestick"),
-                BlockRegistry.get("candlesticks/cyan_iron_wall_candlestick"),
+        register("cyan_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("cyan_iron_candlestick"),
+                BlockRegistry.get("cyan_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/purple_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/purple_iron_candlestick"),
-                BlockRegistry.get("candlesticks/purple_iron_wall_candlestick"),
+        register("purple_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("purple_iron_candlestick"),
+                BlockRegistry.get("purple_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/blue_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/blue_iron_candlestick"),
-                BlockRegistry.get("candlesticks/blue_iron_wall_candlestick"),
+        register("blue_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("blue_iron_candlestick"),
+                BlockRegistry.get("blue_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/brown_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/brown_iron_candlestick"),
-                BlockRegistry.get("candlesticks/brown_iron_wall_candlestick"),
+        register("brown_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("brown_iron_candlestick"),
+                BlockRegistry.get("brown_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/green_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/green_iron_candlestick"),
-                BlockRegistry.get("candlesticks/green_iron_wall_candlestick"),
+        register("green_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("green_iron_candlestick"),
+                BlockRegistry.get("green_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/red_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/red_iron_candlestick"),
-                BlockRegistry.get("candlesticks/red_iron_wall_candlestick"),
+        register("red_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("red_iron_candlestick"),
+                BlockRegistry.get("red_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
-        register("candlesticks/black_iron_candlestick", new WallStandingBlockItem(
-                BlockRegistry.get("candlesticks/black_iron_candlestick"),
-                BlockRegistry.get("candlesticks/black_iron_wall_candlestick"),
+        register("black_iron_candlestick", new WallStandingBlockItem(
+                BlockRegistry.get("black_iron_candlestick"),
+                BlockRegistry.get("black_iron_wall_candlestick"),
                 new FabricItemSettings().group(Utils.GROUP)
         ));
     }

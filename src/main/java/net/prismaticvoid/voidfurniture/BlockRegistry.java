@@ -31,47 +31,47 @@ public class BlockRegistry {
             .luminance(createLightLevelFromLitBlockState(12));
 
         registerWoodenBlock(
-                "seating/chairs/base_chair",
+                "base_chair",
                 woodBlockSettings.nonOpaque(),
                 ChairBlock::new
         );
 
         registerWoodenBlock(
-                "tables/base_table_center",
+                "base_table_center",
                 woodBlockSettings.nonOpaque(),
                 TableCenterBlock::new
         );
 
         registerWoodenBlock(
-                "tables/base_table_corner",
+                "base_table_corner",
                 woodBlockSettings.nonOpaque(),
                 TableCornerBlock::new
         );
 
         registerWoodenBlock(
-                "tables/base_table_edge",
+                "base_table_edge",
                 woodBlockSettings.nonOpaque(),
                 TableEdgeBlock::new
         );
 
-        registerBlockWithItem("plant_pots/plant_pot", new Block(
+        registerBlockWithItem("plant_pot", new Block(
                 FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)
         ));
 
         registerDyedBlock(
-                "plant_pots/base_plant_pot",
+                "base_plant_pot",
                 FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F).requiresTool(),
                 Block::new
         );
 
         registerDyedBlock(
-                "plant_pots/base_glazed_plant_pot",
+                "base_glazed_plant_pot",
                 FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F, 4.2F).requiresTool(),
                 Block::new
         );
 
         registerDyedBlock(
-                "seating/floor_cushions/base_floor_cushion",
+                "base_floor_cushion",
                 FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
                 (FloorCushionBlock::new)
         );
@@ -83,38 +83,38 @@ public class BlockRegistry {
         );
 
         registerDyedBlock(
-                "fairy_lights/base_fairy_light",
+                "base_fairy_light",
                 FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
                 (FairyLightBlock::new)
         );
 
-        registerBlock("candlesticks/gold_candlestick", new CandlestickBlock(candlestickBlockSettings));
+        registerBlock("gold_candlestick", new CandlestickBlock(candlestickBlockSettings));
 
-        registerBlock("candlesticks/gold_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
+        registerBlock("gold_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
 
-        registerBlock("candlesticks/iron_candlestick", new CandlestickBlock(candlestickBlockSettings));
+        registerBlock("iron_candlestick", new CandlestickBlock(candlestickBlockSettings));
 
-        registerBlock("candlesticks/iron_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
+        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
 
-        registerDyedBlock("candlesticks/base_gold_candlestick",
+        registerDyedBlock("base_gold_candlestick",
                 candlestickBlockSettings,
                 CandlestickBlock::new,
                 false
         );
 
-        registerDyedBlock("candlesticks/base_gold_wall_candlestick",
+        registerDyedBlock("base_gold_wall_candlestick",
                 candlestickBlockSettings,
                 CandlestickWallBlock::new,
                 false
         );
 
-        registerDyedBlock("candlesticks/base_iron_candlestick",
+        registerDyedBlock("base_iron_candlestick",
                 candlestickBlockSettings,
                 CandlestickBlock::new,
                 false
         );
 
-        registerDyedBlock("candlesticks/base_iron_wall_candlestick",
+        registerDyedBlock("base_iron_wall_candlestick",
                 candlestickBlockSettings,
                 CandlestickWallBlock::new,
                 false
@@ -122,12 +122,12 @@ public class BlockRegistry {
 
 
         registerWoodenBlock(
-                "seating/benches/base_bench",
+                "base_bench",
                 woodBlockSettings.nonOpaque(),
                 BenchBlock::new
         );
 
-        registerBlockWithItem("chimneys/brick_chimney", new ChimneyBlock(
+        registerBlockWithItem("brick_chimney", new ChimneyBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.RED).strength(2.0f, 6.0f).requiresTool()
         ));
 
@@ -135,29 +135,29 @@ public class BlockRegistry {
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
         ));
 
-        registerWoodenBlock("seating/stools/base_stool", woodBlockSettings, StoolBlock::new);
+        registerWoodenBlock("base_stool", woodBlockSettings, StoolBlock::new);
 
-        registerBlockWithItem("teatime/teapot", new TeapotBlock(
+        registerBlockWithItem("teapot", new TeapotBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("teatime/teacup", new TeacupBlock(
+        registerBlockWithItem("teacup", new TeacupBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("teatime/plate_empty", new PlateBlock(
+        registerBlockWithItem("plate_empty", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("teatime/plate_cookies", new PlateBlock(
+        registerBlockWithItem("plate_cookies", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("teatime/plate_sandwich", new PlateBlock(
+        registerBlockWithItem("plate_sandwich", new PlateBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("misc/trunk", new TrunkBlock(
+        registerBlockWithItem("trunk", new TrunkBlock(
                 woodBlockSettings
         ));
     }

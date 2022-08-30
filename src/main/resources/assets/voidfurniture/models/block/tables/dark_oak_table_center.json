@@ -1,7 +1,0 @@
-{
-  "parent": "voidfurniture:block/tables/base_table_center",
-  "textures": {
-    "0": "minecraft:block/dark_oak_planks",
-    "particle": "minecraft:block/dark_oak_planks"
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/base_candlestick_floor",
+  "textures": {
+    "2": "minecraft:block/gold_block",
+    "particle": "minecraft:block/gold_block"
+  }
+}

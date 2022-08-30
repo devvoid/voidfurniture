@@ -5,11 +5,11 @@
       "item": "minecraft:bread"
     },
     {
-      "item": "voidfurniture:teatime/plate_empty"
+      "item": "voidfurniture:plate_empty"
     }
   ],
   "result": {
-    "item": "voidfurniture:teatime/plate_sandwich",
+    "item": "voidfurniture:plate_sandwich",
     "count": 1
   }
 }
