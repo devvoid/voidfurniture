@@ -4,10 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.client.render.block.entity.CampfireBlockEntityRenderer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,35 +14,28 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-                BlockRegistry.BLOCKS.get("white_fairy_light"),
-                BlockRegistry.BLOCKS.get("orange_fairy_light"),
-                BlockRegistry.BLOCKS.get("magenta_fairy_light"),
-                BlockRegistry.BLOCKS.get("light_blue_fairy_light"),
-                BlockRegistry.BLOCKS.get("yellow_fairy_light"),
-                BlockRegistry.BLOCKS.get("lime_fairy_light"),
-                BlockRegistry.BLOCKS.get("pink_fairy_light"),
-                BlockRegistry.BLOCKS.get("gray_fairy_light"),
-                BlockRegistry.BLOCKS.get("light_gray_fairy_light"),
-                BlockRegistry.BLOCKS.get("cyan_fairy_light"),
-                BlockRegistry.BLOCKS.get("purple_fairy_light"),
-                BlockRegistry.BLOCKS.get("blue_fairy_light"),
-                BlockRegistry.BLOCKS.get("brown_fairy_light"),
-                BlockRegistry.BLOCKS.get("green_fairy_light"),
-                BlockRegistry.BLOCKS.get("red_fairy_light"),
-                BlockRegistry.BLOCKS.get("black_fairy_light")
-        );
+        addBlockToCutout("white_fairy_light");
+        addBlockToCutout("orange_fairy_light");
+        addBlockToCutout("magenta_fairy_light");
+        addBlockToCutout("light_blue_fairy_light");
+        addBlockToCutout("yellow_fairy_light");
+        addBlockToCutout("lime_fairy_light");
+        addBlockToCutout("pink_fairy_light");
+        addBlockToCutout("gray_fairy_light");
+        addBlockToCutout("light_gray_fairy_light");
+        addBlockToCutout("cyan_fairy_light");
+        addBlockToCutout("purple_fairy_light");
+        addBlockToCutout("blue_fairy_light");
+        addBlockToCutout("brown_fairy_light");
+        addBlockToCutout("green_fairy_light");
+        addBlockToCutout("red_fairy_light");
+        addBlockToCutout("black_fairy_light");
 
         addBlockToCutout("ink_quill");
         addBlockToCutout("plate_cookies");
     }
 
     public static void addBlockToCutout(String name) {
-        var b = BlockRegistry.BLOCKS.get(name);
-
-        if (b == null) {
-            VoidFurnitureMod.LOGGER.error("Invalid block " + name + " registered for cutout!");
-        }
-        BlockRenderLayerMap.INSTANCE.putBlock(b, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.get(name), RenderLayer.getCutout());
     }
 }
