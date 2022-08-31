@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class Utils {
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(
             Utils.id("general"),
-            () -> new ItemStack(BlockRegistry.BLOCKS.get("oak_chair"))
+            () -> new ItemStack(BlockRegistry.OAK_CHAIR)
     );
 
     public static Identifier id(String name) {

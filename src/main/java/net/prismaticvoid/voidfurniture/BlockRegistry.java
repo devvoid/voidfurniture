@@ -17,65 +17,118 @@ import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 public class BlockRegistry {
-    public static final HashMap<String, Block> BLOCKS = new HashMap<>();
+    //region Seating
+    public static final Block OAK_CHAIR = register("oak_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_CHAIR = register("birch_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_CHAIR = register("spruce_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_CHAIR = register("jungle_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_CHAIR = register("acacia_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_CHAIR = register("dark_oak_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_CHAIR = register("crimson_chair", new ChairBlock(BlockSettings.WOOD));
+    public static final Block WARPED_CHAIR = register("warped_chair", new ChairBlock(BlockSettings.WOOD));
+
+    public static final Block WHITE_FLOOR_CUSHION = register("white_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block ORANGE_FLOOR_CUSHION = register("orange_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block MAGENTA_FLOOR_CUSHION = register("magenta_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block LIGHT_BLUE_FLOOR_CUSHION = register("light_blue_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block YELLOW_FLOOR_CUSHION = register("yellow_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block LIME_FLOOR_CUSHION = register("lime_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block PINK_FLOOR_CUSHION = register("pink_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block GRAY_FLOOR_CUSHION = register("gray_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block LIGHT_GRAY_FLOOR_CUSHION = register("light_gray_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block CYAN_FLOOR_CUSHION = register("cyan_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block PURPLE_FLOOR_CUSHION = register("purple_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block BLUE_FLOOR_CUSHION = register("blue_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block BROWN_FLOOR_CUSHION = register("brown_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block GREEN_FLOOR_CUSHION = register("green_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block RED_FLOOR_CUSHION = register("red_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+    public static final Block BLACK_FLOOR_CUSHION = register("black_floor_cushion", new FloorCushionBlock(BlockSettings.WOOL));
+
+    public static final Block OAK_BENCH = register("oak_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_BENCH = register("birch_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_BENCH = register("spruce_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_BENCH = register("jungle_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_BENCH = register("acacia_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_BENCH = register("dark_oak_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_BENCH = register("crimson_bench", new BenchBlock(BlockSettings.WOOD));
+    public static final Block WARPED_BENCH = register("warped_bench", new BenchBlock(BlockSettings.WOOD));
+
+    public static final Block OAK_STOOL = register("oak_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_STOOL = register("birch_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_STOOL = register("spruce_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_STOOL = register("jungle_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_STOOL = register("acacia_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_STOOL = register("dark_oak_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_STOOL = register("crimson_stool", new BenchBlock(BlockSettings.WOOD));
+    public static final Block WARPED_STOOL = register("warped_stool", new BenchBlock(BlockSettings.WOOD));
+    //endregion
+
+    //region Tables
+    public static final Block OAK_TABLE_CENTER = register("oak_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block OAK_TABLE_CORNER = register("oak_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block OAK_TABLE_EDGE = register("oak_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_TABLE_CENTER = register("birch_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_TABLE_CORNER = register("birch_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block BIRCH_TABLE_EDGE = register("birch_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_TABLE_CENTER = register("spruce_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_TABLE_CORNER = register("spruce_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block SPRUCE_TABLE_EDGE = register("spruce_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_TABLE_CENTER = register("jungle_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_TABLE_CORNER = register("jungle_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block JUNGLE_TABLE_EDGE = register("jungle_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_TABLE_CENTER = register("acacia_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_TABLE_CORNER = register("acacia_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block ACACIA_TABLE_EDGE = register("acacia_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_TABLE_CENTER = register("dark_oak_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_TABLE_CORNER = register("dark_oak_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block DARK_OAK_TABLE_EDGE = register("dark_oak_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_TABLE_CENTER = register("crimson_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_TABLE_CORNER = register("crimson_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block CRIMSON_TABLE_EDGE = register("crimson_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    public static final Block WARPED_TABLE_CENTER = register("warped_table_center", new TableCenterBlock(BlockSettings.WOOD));
+    public static final Block WARPED_TABLE_CORNER = register("warped_table_corner", new TableCornerBlock(BlockSettings.WOOD));
+    public static final Block WARPED_TABLE_EDGE = register("warped_table_edge", new TableEdgeBlock(BlockSettings.WOOD));
+    //endregion
+
+    //region Plant pots
+    public static final Block PLANT_POT = register("plant_pot", new Block(BlockSettings.TERRACOTTA));
+
+    public static final Block WHITE_PLANT_POT = register("white_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.WHITE)));
+    public static final Block ORANGE_PLANT_POT = register("orange_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.ORANGE)));
+    public static final Block MAGENTA_PLANT_POT = register("magenta_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.MAGENTA)));
+    public static final Block LIGHT_BLUE_PLANT_POT = register("light_blue_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block YELLOW_PLANT_POT = register("yellow_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.YELLOW)));
+    public static final Block LIME_PLANT_POT = register("lime_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIME)));
+    public static final Block PINK_PLANT_POT = register("pink_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.PINK)));
+    public static final Block GRAY_PLANT_POT = register("gray_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.GRAY)));
+    public static final Block LIGHT_GRAY_PLANT_POT = register("light_gray_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIGHT_GRAY)));
+    public static final Block CYAN_PLANT_POT = register("cyan_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.CYAN)));
+    public static final Block PURPLE_PLANT_POT = register("purple_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.PURPLE)));
+    public static final Block BLUE_PLANT_POT = register("blue_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BLUE)));
+    public static final Block BROWN_PLANT_POT = register("brown_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BROWN)));
+    public static final Block GREEN_PLANT_POT = register("green_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.GREEN)));
+    public static final Block RED_PLANT_POT = register("red_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.RED)));
+    public static final Block BLACK_PLANT_POT = register("black_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BLACK)));
+
+    public static final Block WHITE_GLAZED_PLANT_POT = register("white_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.WHITE)));
+    public static final Block ORANGE_GLAZED_PLANT_POT = register("orange_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.ORANGE)));
+    public static final Block MAGENTA_GLAZED_PLANT_POT = register("magenta_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.MAGENTA)));
+    public static final Block LIGHT_BLUE_GLAZED_PLANT_POT = register("light_blue_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIGHT_BLUE)));
+    public static final Block YELLOW_GLAZED_PLANT_POT = register("yellow_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.YELLOW)));
+    public static final Block LIME_GLAZED_PLANT_POT = register("lime_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIME)));
+    public static final Block PINK_GLAZED_PLANT_POT = register("pink_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.PINK)));
+    public static final Block GRAY_GLAZED_PLANT_POT = register("gray_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.GRAY)));
+    public static final Block LIGHT_GRAY_GLAZED_PLANT_POT = register("light_gray_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.LIGHT_GRAY)));
+    public static final Block CYAN_GLAZED_PLANT_POT = register("cyan_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.CYAN)));
+    public static final Block PURPLE_GLAZED_PLANT_POT = register("purple_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.PURPLE)));
+    public static final Block BLUE_GLAZED_PLANT_POT = register("blue_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BLUE)));
+    public static final Block BROWN_GLAZED_PLANT_POT = register("brown_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BROWN)));
+    public static final Block GREEN_GLAZED_PLANT_POT = register("green_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.GREEN)));
+    public static final Block RED_GLAZED_PLANT_POT = register("red_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.RED)));
+    public static final Block BLACK_GLAZED_PLANT_POT = register("black_plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.BLACK)));
+    //endregion
 
     public static void init() {
-        var woodBlockSettings = FabricBlockSettings.of(Material.WOOD)
-                .strength(2.0f, 3.0f)
-                .sounds(BlockSoundGroup.WOOD);
-
-        var candlestickBlockSettings = FabricBlockSettings.of(Material.METAL)
-            .strength(2.0f, 3.0f)
-            .nonOpaque()
-            .sounds(BlockSoundGroup.METAL)
-            .luminance(createLightLevelFromLitBlockState(12));
-
-        registerWoodenBlock(
-                "base_chair",
-                woodBlockSettings.nonOpaque(),
-                ChairBlock::new
-        );
-
-        registerWoodenBlock(
-                "base_table_center",
-                woodBlockSettings.nonOpaque(),
-                TableCenterBlock::new
-        );
-
-        registerWoodenBlock(
-                "base_table_corner",
-                woodBlockSettings.nonOpaque(),
-                TableCornerBlock::new
-        );
-
-        registerWoodenBlock(
-                "base_table_edge",
-                woodBlockSettings.nonOpaque(),
-                TableEdgeBlock::new
-        );
-
-        registerBlockWithItem("plant_pot", new Block(
-                FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)
-        ));
-
-        registerDyedBlock(
-                "base_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F).requiresTool(),
-                Block::new
-        );
-
-        registerDyedBlock(
-                "base_glazed_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F, 4.2F).requiresTool(),
-                Block::new
-        );
-
-        registerDyedBlock(
-                "base_floor_cushion",
-                FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
-                (FloorCushionBlock::new)
-        );
-
         registerBlockWithItem("book_stack", new BookStackBlock(
                 FabricBlockSettings.of(Material.WOOL)
                         .breakInstantly()
@@ -120,13 +173,6 @@ public class BlockRegistry {
                 false
         );
 
-
-        registerWoodenBlock(
-                "base_bench",
-                woodBlockSettings.nonOpaque(),
-                BenchBlock::new
-        );
-
         registerBlockWithItem("brick_chimney", new ChimneyBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.RED).strength(2.0f, 6.0f).requiresTool()
         ));
@@ -134,8 +180,6 @@ public class BlockRegistry {
         registerBlockWithItem("ink_quill", new InkQuillBlock(
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
         ));
-
-        registerWoodenBlock("base_stool", woodBlockSettings, StoolBlock::new);
 
         registerBlockWithItem("teapot", new TeapotBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
@@ -162,64 +206,17 @@ public class BlockRegistry {
         ));
     }
 
-    public static Block get(String name) {
-        return BLOCKS.get(name);
+    public static <B extends Block> B register(String name, B block) {
+        register(name, block, true);
     }
 
-    private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
-        registerWoodenBlock(name, settings, factory, true);
-    }
+    public static <B extends Block> B register(String name, B block, boolean itemToo) {
+        var b = Registry.register(Registry.BLOCK, Utils.id(name), block);
 
-    private static <B extends Block> void registerWoodenBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory, boolean addItemToo) {
-        String[] types = {"oak", "birch", "spruce", "jungle", "acacia", "dark_oak", "crimson", "warped"};
-
-        for (String type : types) {
-            var new_name = name.replace("base", type);
-
-            if (addItemToo) {
-                registerBlockWithItem(new_name, factory.apply(settings));
-            }
-            else {
-                registerBlock(new_name, factory.apply(settings));
-            }
+        if (itemToo) {
+            Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(block, ItemSettings.GROUP));
         }
-    }
 
-    private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
-        registerDyedBlock(name, settings, factory, true);
-    }
-
-    private static <B extends Block> void registerDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory, boolean addItemToo) {
-        String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
-
-        for (int i = 0; i < types.length; i++) {
-            var new_name = name.replace("base", types[i]);
-
-            if (addItemToo) {
-                registerBlockWithItem(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
-            }
-            else {
-                registerBlock(new_name, factory.apply(settings.mapColor(MapColor.get(i))));
-            }
-        }
-    }
-
-    private static <B extends Block> B registerBlockWithItem(String name, B block) {
-        final B b = registerBlock(name, block);
-        var i = Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
-        ItemRegistry.ITEMS.put(name, i);
-        return b;
-    }
-
-    private static <B extends Block> B registerBlock(String name, B block) {
-        var result = Registry.register(Registry.BLOCK, Utils.id(name), block);
-        BLOCKS.put(name, result);
-        return result;
-    }
-
-    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
-        return (state) -> {
-            return (Boolean)state.get(Properties.LIT) ? litLevel : 0;
-        };
+        return block;
     }
 }

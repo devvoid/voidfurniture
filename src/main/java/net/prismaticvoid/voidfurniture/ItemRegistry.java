@@ -192,13 +192,17 @@ public class ItemRegistry {
         ITEMS.put(name, Registry.register(Registry.ITEM, Utils.id(name), item));
     }
 
-    private static <I extends Item> void registerDyedBlock(String name, FabricItemSettings settings, Function<FabricItemSettings,I> factory) {
+    private static <I extends Item> void registerCandlestick(String name) {
         String[] types = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
 
         for (int i = 0; i < types.length; i++) {
             var new_name = name.replace("base", types[i]);
 
-            register(new_name, factory.apply(settings));
+            register(new_name, new WallStandingBlockItem(
+                    BlockRegistry.get(new_name),
+                    BlockRegistry.get(new_name.replace("candlestick", "wall_candlestick")),
+                    ItemSettings.GROUP
+            ));
         }
     }
 }
