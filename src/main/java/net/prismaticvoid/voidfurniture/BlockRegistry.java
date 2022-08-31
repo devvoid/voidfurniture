@@ -20,146 +20,81 @@ public class BlockRegistry {
     public static final HashMap<String, Block> BLOCKS = new HashMap<>();
 
     public static void init() {
-        var woodBlockSettings = FabricBlockSettings.of(Material.WOOD)
-                .strength(2.0f, 3.0f)
-                .sounds(BlockSoundGroup.WOOD);
+        //region Seating
+        registerWoodenBlock("base_chair", BlockSettings.WOOD.nonOpaque(), ChairBlock::new);
 
-        var candlestickBlockSettings = FabricBlockSettings.of(Material.METAL)
-            .strength(2.0f, 3.0f)
-            .nonOpaque()
-            .sounds(BlockSoundGroup.METAL)
-            .luminance(createLightLevelFromLitBlockState(12));
+        registerWoodenBlock("base_bench", BlockSettings.WOOD.nonOpaque(), BenchBlock::new);
 
-        registerWoodenBlock(
-                "base_chair",
-                woodBlockSettings.nonOpaque(),
-                ChairBlock::new
-        );
+        registerWoodenBlock("base_stool", BlockSettings.WOOD.nonOpaque(), StoolBlock::new);
 
-        registerWoodenBlock(
-                "base_table_center",
-                woodBlockSettings.nonOpaque(),
-                TableCenterBlock::new
-        );
+        registerDyedBlock("base_floor_cushion", BlockSettings.WOOL.nonOpaque().noCollision(), FloorCushionBlock::new);
+        //endregion
 
-        registerWoodenBlock(
-                "base_table_corner",
-                woodBlockSettings.nonOpaque(),
-                TableCornerBlock::new
-        );
+        //region Tables
+        registerWoodenBlock("base_table_center", BlockSettings.WOOD.nonOpaque(), TableCenterBlock::new);
 
-        registerWoodenBlock(
-                "base_table_edge",
-                woodBlockSettings.nonOpaque(),
-                TableEdgeBlock::new
-        );
+        registerWoodenBlock("base_table_corner", BlockSettings.WOOD.nonOpaque(), TableCornerBlock::new);
 
-        registerBlockWithItem("plant_pot", new Block(
-                FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)
+        registerWoodenBlock("base_table_edge", BlockSettings.WOOD.nonOpaque(), TableEdgeBlock::new);
+        //endregion
+
+        //region Plant Pots
+        registerBlockWithItem("plant_pot", new Block(BlockSettings.TERRACOTTA));
+
+        registerDyedBlock("base_plant_pot", BlockSettings.TERRACOTTA, Block::new);
+
+        registerDyedBlock("base_glazed_plant_pot", BlockSettings.TERRACOTTA, Block::new);
+        //endregion
+
+        //region Lighting
+        registerDyedBlock("base_fairy_light", BlockSettings.FAIRY_LIGHTS, (FairyLightBlock::new));
+
+        registerBlock("gold_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
+
+        registerBlock("gold_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
+
+        registerBlock("iron_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
+
+        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
+
+        registerDyedBlock("base_gold_candlestick", BlockSettings.CANDLESTICK, CandlestickBlock::new, false);
+
+        registerDyedBlock("base_gold_wall_candlestick", BlockSettings.CANDLESTICK, CandlestickWallBlock::new, false);
+
+        registerDyedBlock("base_iron_candlestick", BlockSettings.CANDLESTICK, CandlestickBlock::new, false);
+
+        registerDyedBlock("base_iron_wall_candlestick", BlockSettings.CANDLESTICK, CandlestickWallBlock::new, false);
+        //endregion
+
+        //region Chimneys
+        registerBlockWithItem("brick_chimney", new ChimneyBlock(
+                FabricBlockSettings.of(Material.STONE, MapColor.RED).strength(2.0f, 6.0f).requiresTool()
         ));
+        //endregion
 
-        registerDyedBlock(
-                "base_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F).requiresTool(),
-                Block::new
-        );
-
-        registerDyedBlock(
-                "base_glazed_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F, 4.2F).requiresTool(),
-                Block::new
-        );
-
-        registerDyedBlock(
-                "base_floor_cushion",
-                FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
-                (FloorCushionBlock::new)
-        );
-
+        //region Misc
         registerBlockWithItem("book_stack", new BookStackBlock(
                 FabricBlockSettings.of(Material.WOOL)
                         .breakInstantly()
                         .nonOpaque())
         );
 
-        registerDyedBlock(
-                "base_fairy_light",
-                FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
-                (FairyLightBlock::new)
-        );
-
-        registerBlock("gold_candlestick", new CandlestickBlock(candlestickBlockSettings));
-
-        registerBlock("gold_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
-
-        registerBlock("iron_candlestick", new CandlestickBlock(candlestickBlockSettings));
-
-        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
-
-        registerDyedBlock("base_gold_candlestick",
-                candlestickBlockSettings,
-                CandlestickBlock::new,
-                false
-        );
-
-        registerDyedBlock("base_gold_wall_candlestick",
-                candlestickBlockSettings,
-                CandlestickWallBlock::new,
-                false
-        );
-
-        registerDyedBlock("base_iron_candlestick",
-                candlestickBlockSettings,
-                CandlestickBlock::new,
-                false
-        );
-
-        registerDyedBlock("base_iron_wall_candlestick",
-                candlestickBlockSettings,
-                CandlestickWallBlock::new,
-                false
-        );
-
-
-        registerWoodenBlock(
-                "base_bench",
-                woodBlockSettings.nonOpaque(),
-                BenchBlock::new
-        );
-
-        registerBlockWithItem("brick_chimney", new ChimneyBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.RED).strength(2.0f, 6.0f).requiresTool()
-        ));
-
         registerBlockWithItem("ink_quill", new InkQuillBlock(
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
         ));
 
-        registerWoodenBlock("base_stool", woodBlockSettings, StoolBlock::new);
+        registerBlockWithItem("teapot", new TeapotBlock(BlockSettings.PORCELAIN.nonOpaque()));
 
-        registerBlockWithItem("teapot", new TeapotBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
-        ));
+        registerBlockWithItem("teacup", new TeacupBlock(BlockSettings.PORCELAIN.nonOpaque()));
 
-        registerBlockWithItem("teacup", new TeacupBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
-        ));
+        registerBlockWithItem("plate_empty", new PlateBlock(BlockSettings.PORCELAIN.nonOpaque()));
 
-        registerBlockWithItem("plate_empty", new PlateBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
-        ));
+        registerBlockWithItem("plate_cookies", new PlateBlock(BlockSettings.PORCELAIN.nonOpaque()));
 
-        registerBlockWithItem("plate_cookies", new PlateBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
-        ));
+        registerBlockWithItem("plate_sandwich", new PlateBlock(BlockSettings.PORCELAIN.nonOpaque()));
 
-        registerBlockWithItem("plate_sandwich", new PlateBlock(
-                FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
-        ));
-
-        registerBlockWithItem("trunk", new TrunkBlock(
-                woodBlockSettings
-        ));
+        registerBlockWithItem("trunk", new TrunkBlock(BlockSettings.WOOD.nonOpaque()));
+        //endregion
     }
 
     public static Block get(String name) {
@@ -215,11 +150,5 @@ public class BlockRegistry {
         var result = Registry.register(Registry.BLOCK, Utils.id(name), block);
         BLOCKS.put(name, result);
         return result;
-    }
-
-    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
-        return (state) -> {
-            return (Boolean)state.get(Properties.LIT) ? litLevel : 0;
-        };
     }
 }
