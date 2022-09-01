@@ -1,21 +1,4 @@
 {
   "replace": false,
-  "values": [
-    "voidfurniture:green_fairy_light",
-    "voidfurniture:light_gray_fairy_light",
-    "voidfurniture:orange_fairy_light",
-    "voidfurniture:lime_fairy_light",
-    "voidfurniture:black_fairy_light",
-    "voidfurniture:brown_fairy_light",
-    "voidfurniture:blue_fairy_light",
-    "voidfurniture:yellow_fairy_light",
-    "voidfurniture:light_blue_fairy_light",
-    "voidfurniture:white_fairy_light",
-    "voidfurniture:cyan_fairy_light",
-    "voidfurniture:pink_fairy_light",
-    "voidfurniture:red_fairy_light",
-    "voidfurniture:purple_fairy_light",
-    "voidfurniture:gray_fairy_light",
-    "voidfurniture:magenta_fairy_light"
-  ]
+  "values": []
 }

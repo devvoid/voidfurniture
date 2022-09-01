@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "voidfurniture:block/teapot", "uvlock": false },
-    "facing=east":  { "model": "voidfurniture:block/teapot", "y":  90, "uvlock": false },
-    "facing=south": { "model": "voidfurniture:block/teapot", "y": 180, "uvlock": false },
-    "facing=west":  { "model": "voidfurniture:block/teapot", "y": 270, "uvlock": false }
-  }
-}

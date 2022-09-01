@@ -46,6 +46,7 @@ public class BlockRegistry {
         registerDyedBlock("base_glazed_plant_pot", BlockSettings.TERRACOTTA, Block::new);
         //endregion
 
+        /*
         //region Lighting
         registerDyedBlock("base_fairy_light", BlockSettings.FAIRY_LIGHTS, (FairyLightBlock::new));
 
@@ -95,6 +96,7 @@ public class BlockRegistry {
 
         registerBlockWithItem("trunk", new TrunkBlock(BlockSettings.WOOD.nonOpaque()));
         //endregion
+        */
     }
 
     public static Block get(String name) {

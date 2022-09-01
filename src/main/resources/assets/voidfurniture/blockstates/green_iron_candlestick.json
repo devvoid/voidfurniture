@@ -1,6 +1,0 @@
-{
-  "variants": {
-    "lit=false": { "model": "voidfurniture:block/green_iron_candlestick", "uvlock": false },
-    "lit=true": { "model": "voidfurniture:block/green_iron_candlestick_lit", "uvlock": false }
-  }
-}

@@ -14,6 +14,7 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        /*
         addBlockToCutout("white_fairy_light");
         addBlockToCutout("orange_fairy_light");
         addBlockToCutout("magenta_fairy_light");
@@ -33,6 +34,8 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
         addBlockToCutout("ink_quill");
         addBlockToCutout("plate_cookies");
+
+         */
     }
 
     public static void addBlockToCutout(String name) {
