@@ -4,53 +4,37 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.Registry;
 import net.prismaticvoid.voidfurniture.blocks.*;
-import net.prismaticvoid.voidfurniture.blocks.PlateBlock;
-import net.prismaticvoid.voidfurniture.blocks.TeacupBlock;
-import net.prismaticvoid.voidfurniture.blocks.TeapotBlock;
 
 import java.util.HashMap;
 import java.util.function.Function;
-import java.util.function.ToIntFunction;
 
 public class BlockRegistry {
     public static final HashMap<String, Block> BLOCKS = new HashMap<>();
 
     public static void init() {
-        var woodBlockSettings = FabricBlockSettings.of(Material.WOOD)
-                .strength(2.0f, 3.0f)
-                .sounds(BlockSoundGroup.WOOD);
-
-        var candlestickBlockSettings = FabricBlockSettings.of(Material.METAL)
-            .strength(2.0f, 3.0f)
-            .nonOpaque()
-            .sounds(BlockSoundGroup.METAL)
-            .luminance(createLightLevelFromLitBlockState(12));
-
         registerWoodenBlock(
                 "base_chair",
-                woodBlockSettings.nonOpaque(),
+                BlockSettings.WOOD.nonOpaque(),
                 ChairBlock::new
         );
 
         registerWoodenBlock(
                 "base_table_center",
-                woodBlockSettings.nonOpaque(),
+                BlockSettings.WOOD.nonOpaque(),
                 TableCenterBlock::new
         );
 
         registerWoodenBlock(
                 "base_table_corner",
-                woodBlockSettings.nonOpaque(),
+                BlockSettings.WOOD.nonOpaque(),
                 TableCornerBlock::new
         );
 
         registerWoodenBlock(
                 "base_table_edge",
-                woodBlockSettings.nonOpaque(),
+                BlockSettings.WOOD.nonOpaque(),
                 TableEdgeBlock::new
         );
 
@@ -88,34 +72,34 @@ public class BlockRegistry {
                 (FairyLightBlock::new)
         );
 
-        registerBlock("gold_candlestick", new CandlestickBlock(candlestickBlockSettings));
+        registerBlock("gold_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
 
-        registerBlock("gold_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
+        registerBlock("gold_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
 
-        registerBlock("iron_candlestick", new CandlestickBlock(candlestickBlockSettings));
+        registerBlock("iron_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
 
-        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(candlestickBlockSettings));
+        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
 
         registerDyedBlock("base_gold_candlestick",
-                candlestickBlockSettings,
+                BlockSettings.CANDLESTICK,
                 CandlestickBlock::new,
                 false
         );
 
         registerDyedBlock("base_gold_wall_candlestick",
-                candlestickBlockSettings,
+                BlockSettings.CANDLESTICK,
                 CandlestickWallBlock::new,
                 false
         );
 
         registerDyedBlock("base_iron_candlestick",
-                candlestickBlockSettings,
+                BlockSettings.CANDLESTICK,
                 CandlestickBlock::new,
                 false
         );
 
         registerDyedBlock("base_iron_wall_candlestick",
-                candlestickBlockSettings,
+                BlockSettings.CANDLESTICK,
                 CandlestickWallBlock::new,
                 false
         );
@@ -123,7 +107,7 @@ public class BlockRegistry {
 
         registerWoodenBlock(
                 "base_bench",
-                woodBlockSettings.nonOpaque(),
+                BlockSettings.WOOD.nonOpaque(),
                 BenchBlock::new
         );
 
@@ -135,7 +119,7 @@ public class BlockRegistry {
                 FabricBlockSettings.of(Material.DECORATION).breakInstantly()
         ));
 
-        registerWoodenBlock("base_stool", woodBlockSettings, StoolBlock::new);
+        registerWoodenBlock("base_stool", BlockSettings.WOOD, StoolBlock::new);
 
         registerBlockWithItem("teapot", new TeapotBlock(
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
@@ -158,7 +142,7 @@ public class BlockRegistry {
         ));
 
         registerBlockWithItem("trunk", new TrunkBlock(
-                woodBlockSettings
+                BlockSettings.WOOD
         ));
     }
 
@@ -215,11 +199,5 @@ public class BlockRegistry {
         var result = Registry.register(Registry.BLOCK, Utils.id(name), block);
         BLOCKS.put(name, result);
         return result;
-    }
-
-    private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
-        return (state) -> {
-            return (Boolean)state.get(Properties.LIT) ? litLevel : 0;
-        };
     }
 }
