@@ -38,6 +38,7 @@ public class ModelGenerator extends FabricModelProvider {
                 continue;
             }
 
+            // For everything else, just register a simple state
             gen.registerSimpleState(BlockRegistry.get(name));
         }
     }

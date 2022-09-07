@@ -38,7 +38,7 @@ public class BlockRegistry {
         registerWoodenBlock("base_table_edge", BlockSettings.WOOD.nonOpaque(), TableEdgeBlock::new);
         //endregion
 
-        /*
+        
         //region Plant Pots
         registerBlockWithItem("plant_pot", new Block(BlockSettings.TERRACOTTA));
 
@@ -47,7 +47,7 @@ public class BlockRegistry {
         registerDyedBlock("base_glazed_plant_pot", BlockSettings.TERRACOTTA, Block::new);
         //endregion
 
-
+        /*
         //region Lighting
         registerDyedBlock("base_fairy_light", BlockSettings.FAIRY_LIGHTS, (FairyLightBlock::new));
 
