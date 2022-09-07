@@ -38,47 +38,41 @@ public class BlockRegistry {
                 TableEdgeBlock::new
         );
 
-        registerBlockWithItem("plant_pot", new Block(
-                FabricBlockSettings.of(Material.STONE, MapColor.ORANGE).strength(1.25F, 4.2F)
-        ));
+        registerBlockWithItem("plant_pot", new Block(BlockSettings.TERRACOTTA.mapColor(MapColor.TERRACOTTA_ORANGE)));
 
         registerDyedBlock(
                 "base_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.25F, 4.2F).requiresTool(),
+                BlockSettings.TERRACOTTA,
                 Block::new
         );
 
         registerDyedBlock(
                 "base_glazed_plant_pot",
-                FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_WHITE).strength(1.4F, 4.2F).requiresTool(),
+                BlockSettings.TERRACOTTA,
                 Block::new
         );
 
         registerDyedBlock(
                 "base_floor_cushion",
-                FabricBlockSettings.of(Material.WOOL).strength(0.8f).noCollision(),
+                BlockSettings.WOOL.noCollision(),
                 (FloorCushionBlock::new)
         );
 
         registerBlockWithItem("book_stack", new BookStackBlock(
-                FabricBlockSettings.of(Material.WOOL)
+                FabricBlockSettings.of(Material.DECORATION)
                         .breakInstantly()
                         .nonOpaque())
         );
 
         registerDyedBlock(
                 "base_fairy_light",
-                FabricBlockSettings.of(Material.GLASS).noCollision().breakInstantly().nonOpaque().luminance(12),
+                BlockSettings.FAIRY_LIGHTS,
                 (FairyLightBlock::new)
         );
 
         registerBlock("gold_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
 
         registerBlock("gold_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
-
-        registerBlock("iron_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
-
-        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
 
         registerDyedBlock("base_gold_candlestick",
                 BlockSettings.CANDLESTICK,
@@ -91,6 +85,10 @@ public class BlockRegistry {
                 CandlestickWallBlock::new,
                 false
         );
+
+        registerBlock("iron_candlestick", new CandlestickBlock(BlockSettings.CANDLESTICK));
+
+        registerBlock("iron_wall_candlestick", new CandlestickWallBlock(BlockSettings.CANDLESTICK));
 
         registerDyedBlock("base_iron_candlestick",
                 BlockSettings.CANDLESTICK,
@@ -141,9 +139,7 @@ public class BlockRegistry {
                 FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY).strength(1.8f)
         ));
 
-        registerBlockWithItem("trunk", new TrunkBlock(
-                BlockSettings.WOOD
-        ));
+        registerBlockWithItem("trunk", new TrunkBlock(BlockSettings.WOOD));
     }
 
     public static Block get(String name) {
