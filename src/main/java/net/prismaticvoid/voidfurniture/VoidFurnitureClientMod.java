@@ -33,6 +33,8 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
 
         addBlockToCutout("ink_quill");
         addBlockToCutout("plate_cookies");
+
+        addBlockToCutout("oak_campfire");
     }
 
     public static void addBlockToCutout(String name) {
