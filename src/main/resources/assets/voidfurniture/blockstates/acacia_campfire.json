@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model":  "voidfurniture:block/acacia_campfire_off"},
+    "lit=true": { "model":  "voidfurniture:block/acacia_campfire" }
+  }
+}

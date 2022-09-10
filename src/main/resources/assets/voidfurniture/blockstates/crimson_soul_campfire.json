@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model":  "voidfurniture:block/crimson_soul_campfire_off"},
+    "lit=true": { "model":  "voidfurniture:block/crimson_soul_campfire" }
+  }
+}

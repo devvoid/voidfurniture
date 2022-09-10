@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "voidfurniture:oak_campfire",
+    "voidfurniture:birch_campfire",
+    "voidfurniture:spruce_campfire",
+    "voidfurniture:jungle_campfire",
+    "voidfurniture:acacia_campfire",
+    "voidfurniture:dark_oak_campfire",
+    "voidfurniture:crimson_campfire",
+    "voidfurniture:warped_campfire"
+  ]
+}

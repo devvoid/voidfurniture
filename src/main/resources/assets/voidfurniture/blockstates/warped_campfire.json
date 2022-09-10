@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model":  "voidfurniture:block/warped_campfire_off"},
+    "lit=true": { "model":  "voidfurniture:block/warped_campfire" }
+  }
+}

@@ -39,6 +39,12 @@ public class BlockSettings {
             .luminance(createLightLevelFromLitBlockState(15))
             .nonOpaque();
 
+    public static final FabricBlockSettings SOUL_CAMPFIRE = FabricBlockSettings.of(Material.WOOD)
+            .strength(2.0f)
+            .sounds(BlockSoundGroup.WOOD)
+            .luminance(createLightLevelFromLitBlockState(10))
+            .nonOpaque();
+
     private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
         return (state) -> (Boolean)state.get(Properties.LIT) ? litLevel : 0;
     }

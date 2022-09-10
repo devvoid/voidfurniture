@@ -1,0 +1,7 @@
+{
+  "parent": "voidfurniture:block/base_campfire",
+  "textures": {
+    "log": "voidfurniture:block/acacia_campfire_log",
+    "particles": "voidfurniture:block/acacia_campfire_log"
+  }
+}

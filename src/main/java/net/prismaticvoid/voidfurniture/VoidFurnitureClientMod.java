@@ -37,6 +37,23 @@ public class VoidFurnitureClientMod implements ClientModInitializer {
         addBlockToCutout("plate_cookies");
 
         addBlockToCutout("oak_campfire");
+        addBlockToCutout("birch_campfire");
+        addBlockToCutout("spruce_campfire");
+        addBlockToCutout("jungle_campfire");
+        addBlockToCutout("acacia_campfire");
+        addBlockToCutout("dark_oak_campfire");
+        addBlockToCutout("crimson_campfire");
+        addBlockToCutout("warped_campfire");
+
+        addBlockToCutout("oak_soul_campfire");
+        addBlockToCutout("birch_soul_campfire");
+        addBlockToCutout("spruce_soul_campfire");
+        addBlockToCutout("jungle_soul_campfire");
+        addBlockToCutout("acacia_soul_campfire");
+        addBlockToCutout("dark_oak_soul_campfire");
+        addBlockToCutout("crimson_soul_campfire");
+        addBlockToCutout("warped_soul_campfire");
+
     }
 
     public static void addBlockToCutout(String name) {

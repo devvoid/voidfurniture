@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "voidfurniture:soul_campfires",
+  "pattern": [
+    " S ",
+    "SCS",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:jungle_logs"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "tag": "minecraft:soul_fire_base_blocks"
+    }
+  },
+  "result": {
+    "item": "voidfurniture:jungle_soul_campfire"
+  }
+}

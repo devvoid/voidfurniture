@@ -1,0 +1,8 @@
+{
+  "parent": "voidfurniture:block/base_campfire",
+  "textures": {
+	"fire": "minecraft:block/soul_campfire_fire",
+    "log": "voidfurniture:block/oak_campfire_log",
+    "particles": "voidfurniture:block/oak_campfire_log"
+  }
+}

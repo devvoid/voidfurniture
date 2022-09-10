@@ -142,6 +142,22 @@ public class BlockRegistry {
         registerBlockWithItem("trunk", new TrunkBlock(BlockSettings.WOOD));
 
         registerBlockWithItem("oak_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("birch_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("spruce_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("jungle_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("acacia_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("dark_oak_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("crimson_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+        registerBlockWithItem("warped_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
+
+        registerBlockWithItem("oak_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("birch_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("spruce_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("jungle_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("acacia_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("dark_oak_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("crimson_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
+        registerBlockWithItem("warped_soul_campfire", new ModdedCampfireBlock(false, 2, BlockSettings.SOUL_CAMPFIRE));
     }
 
     public static Block get(String name) {
