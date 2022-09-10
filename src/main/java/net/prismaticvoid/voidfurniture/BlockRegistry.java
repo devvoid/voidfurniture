@@ -141,7 +141,7 @@ public class BlockRegistry {
 
         registerBlockWithItem("trunk", new TrunkBlock(BlockSettings.WOOD));
 
-        registerBlockWithItem("oak_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.WOOD));
+        registerBlockWithItem("oak_campfire", new ModdedCampfireBlock(true, 1, BlockSettings.CAMPFIRE));
     }
 
     public static Block get(String name) {

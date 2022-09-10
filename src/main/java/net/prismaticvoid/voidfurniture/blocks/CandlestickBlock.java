@@ -5,6 +5,8 @@ import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.ActionResult;
@@ -49,13 +51,23 @@ public class CandlestickBlock extends AbstractCandleBlock {
         ItemStack itemStack = player.getStackInHand(hand);
         if (!state.get(LIT)) {
             // Attempt to light
-            if (itemStack.isOf(Items.FLINT_AND_STEEL) || itemStack.isOf(Items.FIRE_CHARGE)) {
+            if (itemStack.isOf(Items.FLINT_AND_STEEL)) {
+                var pitch = world.getRandom().nextFloat() * 0.4F + 0.8F;
+                world.playSound(null, pos, SoundEvents.ITEM_FLINTANDSTEEL_USE, SoundCategory.BLOCKS, 1.0F, pitch);
+                world.setBlockState(pos, state.with(LIT, true));
+                return ActionResult.SUCCESS;
+            }
+
+            if (itemStack.isOf(Items.FIRE_CHARGE)) {
+                var random = world.getRandom();
+                var pitch = (random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F;
+                world.playSound(null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, pitch);
                 world.setBlockState(pos, state.with(LIT, true));
                 return ActionResult.SUCCESS;
             }
         }
         else {
-            // Not lit, so extinguish if hand empty.
+            // Lit, so extinguish if hand empty.
             if (player.getStackInHand(hand).isEmpty() && player.isInSneakingPose()) {
                 extinguish(player, state, world, pos);
                 return ActionResult.SUCCESS;

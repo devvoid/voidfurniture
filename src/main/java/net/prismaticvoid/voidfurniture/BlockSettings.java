@@ -33,6 +33,12 @@ public class BlockSettings {
     public static final FabricBlockSettings PORCELAIN = FabricBlockSettings.of(Material.STONE, MapColor.WHITE_GRAY)
             .strength(1.8f);
 
+    public static final FabricBlockSettings CAMPFIRE = FabricBlockSettings.of(Material.WOOD)
+            .strength(2.0f)
+            .sounds(BlockSoundGroup.WOOD)
+            .luminance(createLightLevelFromLitBlockState(15))
+            .nonOpaque();
+
     private static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel) {
         return (state) -> (Boolean)state.get(Properties.LIT) ? litLevel : 0;
     }
