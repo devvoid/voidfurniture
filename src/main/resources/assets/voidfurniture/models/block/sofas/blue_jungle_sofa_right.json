@@ -1,0 +1,7 @@
+{
+	"parent": "voidfurniture:block/sofas/base_sofa_right",
+	"textures": {
+		"0": "minecraft:jungle_planks",
+		"1": "minecraft:blue_wool"
+	}
+}

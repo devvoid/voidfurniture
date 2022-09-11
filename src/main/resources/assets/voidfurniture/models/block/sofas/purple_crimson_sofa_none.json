@@ -1,0 +1,7 @@
+{
+	"parent": "voidfurniture:block/sofas/base_sofa_none",
+	"textures": {
+		"0": "minecraft:crimson_planks",
+		"1": "minecraft:purple_wool"
+	}
+}

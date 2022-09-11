@@ -1,0 +1,7 @@
+{
+	"parent": "voidfurniture:block/sofas/base_sofa_left",
+	"textures": {
+		"0": "minecraft:birch_planks",
+		"1": "minecraft:light_gray_wool"
+	}
+}
