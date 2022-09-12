@@ -1,5 +1,6 @@
 ## TODO
 - Campfires need recipes to turn them back into their vanilla counterparts
+- Sofas need recipes
 - A README.md would be appreciated
 - Better collision shape for fairy lights
 

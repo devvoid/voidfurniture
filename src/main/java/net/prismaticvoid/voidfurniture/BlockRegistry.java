@@ -20,6 +20,8 @@ public class BlockRegistry {
                 ChairBlock::new
         );
 
+        registerWoodAndDyedBlock("sofas/white_oak_sofa", BlockSettings.WOOD.nonOpaque(), SofaBlock::new);
+
         registerWoodenBlock(
                 "base_table_center",
                 BlockSettings.WOOD.nonOpaque(),
@@ -202,11 +204,22 @@ public class BlockRegistry {
         }
     }
 
-    private static <B extends Block> B registerBlockWithItem(String name, B block) {
+    public static <B extends Block> void registerWoodAndDyedBlock(String name, FabricBlockSettings settings, Function<FabricBlockSettings,B> factory) {
+        String[] wood = {"oak", "birch", "spruce", "jungle", "acacia", "dark_oak", "crimson", "warped"};
+        String[] colors = {"white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"};
+
+        for (var i : wood) {
+            for (var j : colors) {
+                var new_name = name.replace("oak", i).replace("white", j);
+                registerBlockWithItem(new_name, factory.apply(settings));
+            }
+        }
+    }
+
+    private static <B extends Block> void registerBlockWithItem(String name, B block) {
         final B b = registerBlock(name, block);
         var i = Registry.register(Registry.ITEM, Utils.id(name), new BlockItem(b, new FabricItemSettings().group(Utils.GROUP)));
         ItemRegistry.ITEMS.put(name, i);
-        return b;
     }
 
     private static <B extends Block> B registerBlock(String name, B block) {

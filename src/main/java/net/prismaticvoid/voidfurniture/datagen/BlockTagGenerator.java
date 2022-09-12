@@ -32,6 +32,7 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
         // Seating
         createBlockTag("benches", "bench");
+        createBlockTag("sofas", "sofa");
         createBlockTag("chairs", "chair");
         createBlockTag("stools", "stool");
         createBlockTag("floor_cushions", "floor_cushion");

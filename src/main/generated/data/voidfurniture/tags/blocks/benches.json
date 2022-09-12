@@ -3,11 +3,11 @@
   "values": [
     "voidfurniture:spruce_bench",
     "voidfurniture:crimson_bench",
-    "voidfurniture:warped_bench",
-    "voidfurniture:acacia_bench",
     "voidfurniture:birch_bench",
     "voidfurniture:jungle_bench",
     "voidfurniture:oak_bench",
+    "voidfurniture:warped_bench",
+    "voidfurniture:acacia_bench",
     "voidfurniture:dark_oak_bench"
   ]
 }

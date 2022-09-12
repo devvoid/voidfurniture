@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 public final class Tags {
     public final static TagKey<Block> FAIRY_LIGHTS = registerBlock("fairy_lights");
     public final static TagKey<Block> BENCHES = registerBlock("benches");
+    public final static TagKey<Block> SOFAS = registerBlock("sofas");
 
     public final static TagKey<Item> SHOVELS = registerItem("shovels");
 

@@ -1,7 +1,7 @@
 {
 	"parent": "voidfurniture:block/sofas/base_sofa_none",
 	"textures": {
-		"0": "minecraft:dark_oak_planks",
-		"1": "minecraft:green_wool"
+		"0": "minecraft:block/dark_oak_planks",
+		"1": "minecraft:block/green_wool"
 	}
 }

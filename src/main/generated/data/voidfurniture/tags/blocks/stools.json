@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "voidfurniture:dark_oak_stool",
     "voidfurniture:acacia_stool",
-    "voidfurniture:jungle_stool",
     "voidfurniture:warped_stool",
-    "voidfurniture:oak_stool",
     "voidfurniture:birch_stool",
-    "voidfurniture:spruce_stool",
-    "voidfurniture:crimson_stool"
+    "voidfurniture:crimson_stool",
+    "voidfurniture:dark_oak_stool",
+    "voidfurniture:jungle_stool",
+    "voidfurniture:oak_stool",
+    "voidfurniture:spruce_stool"
   ]
 }
