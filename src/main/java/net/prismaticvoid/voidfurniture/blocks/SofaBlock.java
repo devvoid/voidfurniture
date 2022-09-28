@@ -7,6 +7,7 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -16,12 +17,12 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.prismaticvoid.voidfurniture.Tags;
 import net.prismaticvoid.voidfurniture.Utils;
+import net.prismaticvoid.voidfurniture.blocks.enums.Sides;
 
 import java.util.HashMap;
 
 public class SofaBlock extends HorizontalFacingBlock {
-    private static final BooleanProperty LEFT = BooleanProperty.of("left");
-    private static final BooleanProperty RIGHT = BooleanProperty.of("right");
+    private static final EnumProperty<Sides> SIDES = EnumProperty.of("sides", Sides.class);
 
     private static final HashMap<Direction, Direction> LEFT_DIRECTIONS;
     private static final HashMap<Direction, Direction> RIGHT_DIRECTIONS;
@@ -94,8 +95,7 @@ public class SofaBlock extends HorizontalFacingBlock {
         setDefaultState(
                 this.stateManager.getDefaultState()
                         .with(Properties.HORIZONTAL_FACING, Direction.NORTH)
-                        .with(LEFT, false)
-                        .with(RIGHT, false)
+                        .with(SIDES, Sides.BOTH)
         );
     }
 
@@ -111,10 +111,27 @@ public class SofaBlock extends HorizontalFacingBlock {
         var block_left = pos.offset(left);
         var block_right = pos.offset(right);
 
+        var needs_left = !canConnect(world.getBlockState(block_left));
+        var needs_right = !canConnect(world.getBlockState(block_right));
+
+        Sides sides_state;
+
+        if (needs_left && needs_right) {
+            sides_state = Sides.BOTH;
+        }
+        else if (needs_left) {
+            sides_state = Sides.LEFT;
+        }
+        else if (needs_right) {
+            sides_state = Sides.RIGHT;
+        }
+        else {
+            sides_state = Sides.NONE;
+        }
+
         return this.getDefaultState()
                 .with(Properties.HORIZONTAL_FACING, ctx.getPlayerFacing().getOpposite())
-                .with(LEFT, canConnect(world.getBlockState(block_left)))
-                .with(RIGHT, canConnect(world.getBlockState(block_right)));
+                .with(SIDES, sides_state);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -123,37 +140,45 @@ public class SofaBlock extends HorizontalFacingBlock {
         var block_left = pos.offset(LEFT_DIRECTIONS.get(facing));
         var block_right = pos.offset(RIGHT_DIRECTIONS.get(facing));
 
-        return state
-                // Yes, this is inverted. No, I don't know why. There must be
-                // another inversion somewhere else that I can't find right now.
-                .with(RIGHT, canConnect(world.getBlockState(block_left)))
-                .with(LEFT, canConnect(world.getBlockState(block_right)));
+        var needs_left = !canConnect(world.getBlockState(block_left));
+        var needs_right = !canConnect(world.getBlockState(block_right));
+
+        Sides sides_state;
+
+        if (needs_left && needs_right) {
+            sides_state = Sides.BOTH;
+        }
+        else if (needs_right) {
+            sides_state = Sides.LEFT;
+        }
+        else if (needs_left) {
+            sides_state = Sides.RIGHT;
+        }
+        else {
+            sides_state = Sides.NONE;
+        }
+
+        return state.with(SIDES, sides_state);
     }
 
     protected Boolean canConnect(BlockState state) {
-        return state.isIn(Tags.SOFAS);
+        return state.isIn(Tags.BENCHES);
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> stateManager) {
-        stateManager.add(Properties.HORIZONTAL_FACING, LEFT, RIGHT);
+        stateManager.add(Properties.HORIZONTAL_FACING, SIDES);
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView view, BlockPos pos, ShapeContext ctx) {
         Direction dir = state.get(FACING);
 
-        if (state.get(LEFT) && state.get(RIGHT)) {
-            return SHAPES_NONE.get(dir);
-        }
-        else if (state.get(LEFT)) {
-            return SHAPES_RIGHT.get(dir);
-        }
-        else if (state.get(RIGHT)) {
-            return SHAPES_LEFT.get(dir);
-        }
-        else {
-            return SHAPES_BOTH.get(dir);
-        }
+        return switch(state.get(SIDES)) {
+            case BOTH -> SHAPES_BOTH.get(dir);
+            case LEFT -> SHAPES_LEFT.get(dir);
+            case RIGHT -> SHAPES_RIGHT.get(dir);
+            case NONE -> SHAPES_NONE.get(dir);
+        };
     }
 }
